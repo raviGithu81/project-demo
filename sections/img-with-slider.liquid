@@ -1,0 +1,279 @@
+{% if section.settings.enabled != blank %}
+  {{ 'img-with-slider.css' | asset_url | stylesheet_tag }}
+  <section
+    class="section-content pt-0 overflow-hidden"
+    data-section-id="{{ section.id }}"
+    style="background-color: {{ section.settings.block_bg_color }}; color: {{ section.settings.block_text_color }};"
+  >
+    <div class="container">
+    {% if section.settings.section_title != blank %}
+        <h2 class="d-block d-lg-none h3 mt-n2 mb-3" style="color: {{ section.settings.block_text_color }};">
+          {{ section.settings.section_title }}
+        </h2>
+    {% endif %}
+    <div class="img-slide-wrapper d-flex flex-wrap ms-auto pb-lg-1">
+      <div class="col-12 col-lg-8 img-view-slider order-lg-1 position-relative">
+        <slider-element class="swiper-container" data-main-slider>
+          <div
+            class="swiper swiper-slider data-inspire ms-lg-n3 me-lg-0"
+            data-nav="img-thumbnails"
+            data-slider='
+            {
+                "loop": false,
+                "slidesPerView": "auto",
+                "allowTouchMove": true,
+                "grabCursor": true,
+                "spaceBetween": 10,
+                "slidesPerGroup": 1,
+                "navigation": {
+                    "nextEl": ".img-slide-button-next",
+                    "prevEl": ".img-slide-button-prev"
+                },
+                "breakpoints": {
+                  "992": {
+                    "slidesPerView": 1.785,
+                    "loop": true
+                  }
+               }
+            }
+            '>
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'category' %}
+                  <div class="swiper-slide">
+                    {%- if block.settings.image != blank -%}
+                      <img
+                        srcset="
+                          {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 350 }} 350w,{%- endif -%}
+                          {%- if block.settings.image.width >= 400 -%}{{ block.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+                          {%- if block.settings.image.width >= 500 -%}{{ block.settings.image | image_url: width: 500 }} 500w,{%- endif -%}
+                          {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                          {%- if block.settings.image.width >= 650 -%}{{ block.settings.image | image_url: width: 650 }} 650w,{%- endif -%}
+                          {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                          {%- if block.settings.image.width >= 850 -%}{{ block.settings.image | image_url: width: 850 }} 850w,{%- endif -%}
+                          {%- if block.settings.image.width >= 900 -%}{{ block.settings.image | image_url: width: 900 }} 900w{%- endif -%}
+                        "
+                        src="{{ block.settings.image | image_url: width: 50 }}"
+                        class="w-100"
+                        sizes="(min-width:992px) 35.5vw, calc(100vw - 40px)"
+                        alt="{{ block.settings.section_title | escape }}"
+                        loading="lazy"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                      >
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="arrow d-flex">
+            <div class="swiper-button-prev img-slide-button-prev icon-btn-arrow-left"></div>
+            <div class="swiper-button-next img-slide-button-next icon-btn-arrow"></div>
+          </div>
+        </slider-element>
+      </div>
+
+      <div class="col-12 col-lg-4 d-flex flex-column justify-content-center mt-n1 mt-lg-5 pt-4 pb-2 pe-lg-5 py-lg-0">
+        {% if section.settings.section_title != blank %}
+          <h2 class="h3 d-none d-lg-block mb-lg-5 mb-xl-11 pb-lg-1 lh-sm" style="color: {{ section.settings.block_text_color }};">
+            {{ section.settings.section_title }}
+          </h2>
+        {% endif %}
+        <div class="swiper-container" data-thumbSlider>
+          <div
+            class="swiper swiper-slider img-thumbnails"
+            data-slider='{
+              "direction":"horizontal",
+              "loop": false,
+              "slidesPerView": "1",
+              "grabCursor": true,
+              "slideToClickedSlide": true,
+              "speed": 500,
+              "effect": "fade",
+              "fadeEffect": {
+                "crossFade": "false"
+              },
+              "breakpoints": {
+                "992": {
+                  "loop": true
+                }
+             }
+          }'>
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'content' %}
+                <div class="swiper-slide">
+                  <div class="block-content">
+                    {% if block.settings.block_title != blank %}
+                      <div class="h5 pb-lg-1" style="color: {{ section.settings.block_text_color }};">
+                        {{ block.settings.block_title }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.block_richtext != blank %}
+                      <p class="mb-4 pb-1">{{ block.settings.block_richtext }}</p>
+                    {% endif %}
+                    {% if block.settings.btn_txt != blank %}
+                      <a
+                        {% if block.settings.btn_link %}
+                          href="{{ block.settings.btn_link }}"
+                        {% endif -%}
+                        class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}"
+                      >
+                        {{- block.settings.btn_txt -}}
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+{% endif %}
+{% schema %}
+{
+  "name": "Image With Slider",
+  "class": "img-w-sliders",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "block_bg_color",
+      "label": "Background Color",
+      "default": "#2B3033"
+    },
+    {
+      "type": "color",
+      "id": "block_text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Block Title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Add Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "name": "Add Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "block_richtext",
+          "label": "Discription"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,297 @@
+{% if section.settings.enabled != blank %}
+  {{ 'half-img-with-text.css' | asset_url | stylesheet_tag }}
+  <section
+    class="section-content p-0"
+    data-section-id="{{ section.id }}"
+  >
+    <div class="d-flex flex-wrap half-grids-img">
+      {% for block in section.blocks limit:2 %}
+        <div class="half-blocks col-12 col-lg-6 d-flex align-items-center position-relative overflow-hidden" style="background-image: {{ block.settings.block_bg_color }}; color: {{ block.settings.block_text_color }};">
+           {% comment %} {% if forloop.index == 1 %} 
+          <div class="progress-bardd" id="progressBar1">
+            <div class="progress-bar-fill" id="progressBarFill1"></div>
+          </div>
+          {% else %}
+          <div class="progress-bardd" id="progressBar2">
+            <div class="progress-bar-fill" id="progressBarFill2"></div>
+          </div>
+        {% endif %}
+        <div class="progress-line-container" id="progressLineContainer">
+          <div class="progress-line" id="progressLine"></div>
+        </div> {% endcomment %}
+        
+       
+          {%- if block.settings.image != blank -%}
+                  <picture>
+                    {%- if block.settings.image.width >= 1500 -%}<source media="(min-width: 2560px)" srcset="{{ block.settings.image | image_url: width: 1500 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 1300 -%}<source media="(min-width: 1901px)" srcset="{{ block.settings.image | image_url: width: 1300 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 1000 -%}<source media="(min-width: 1700px)" srcset="{{ block.settings.image | image_url: width: 1000 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 900 -%}<source media="(min-width: 1441px)" srcset="{{ block.settings.image | image_url: width: 900 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 750 -%}<source media="(min-width: 1200px)" srcset="{{ block.settings.image | image_url: width: 750 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 650 -%}<source media="(min-width: 1024px)" srcset="{{ block.settings.image | image_url: width: 650 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 600 -%}<source media="(min-width: 992px)" srcset="{{ block.settings.image | image_url: width: 600 }}">{%- endif -%}
+                    {%- if block.settings.image.width >= 550 -%}<source media="(min-width: 768px)" srcset="{{ block.settings.image | image_url: width: 550 }}">{%- endif -%}
+
+                    {%- if block.settings.image_mobile.width >= 767 -%}<source media="(min-width: 551px)" srcset="{{ block.settings.image_mobile | image_url: width: 767 }}">{%- endif -%}
+                    {%- if block.settings.image_mobile.width >= 550 -%}<source media="(min-width: 451px)" srcset="{{ block.settings.image_mobile | image_url: width: 550 }}">{%- endif -%}
+                    {%- if block.settings.image_mobile.width >= 450 -%}<source media="(min-width: 390px)" srcset="{{ block.settings.image_mobile | image_url: width: 450 }}">{%- endif -%}
+                    {%- if block.settings.image_mobile.width >= 390 -%}<source media="(min-width: 320px)" srcset="{{ block.settings.image_mobile | image_url: width: 390 }}">{%- endif -%}
+
+                    <img src="{{ block.settings.image | image_url: width: 50 }}" 
+                    alt="{{ block.settings.title | escape }}"
+                    width="{{ block.settings.image.width }}" 
+                    height="{{ block.settings.image.height }}"
+                    loading="lazy"
+                    class="position-absolute start-0 top-0 w-100 h-100 object-fit-cover"
+                    >
+                </picture>
+
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            <div class="position-absolute half-content ps-1 pe-2 ps-lg-0 ms-5 ms-lg-8 ms-xl-11 mt-n2 mt-lg-n3">
+               {% comment %} {% if forloop.index == 1 %}
+                <div class="progress-bardd" id="progressBar1">
+                  <div class="progress-bar-fill" id="progressBarFill1"></div>
+                </div> 
+              {% endif %}  {% endcomment %}
+              {% if block.settings.title != blank %}
+                <h2 class="spot-title mb-2 mb-lg-4" style="color: {{ block.settings.block_text_color }};">{{ block.settings.title }}</h2>
+              {% endif %}
+              {% if block.settings.richtext != blank %}
+                <p class="mb-5 mb-lg-4">{{ block.settings.richtext }}</p>
+              {% endif %}
+              {% if block.settings.btn_txt != blank %}
+                <a
+                  {% if block.settings.btn_link %}
+                    href="{{ block.settings.btn_link }}"
+                  {% endif -%}
+                  class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}"
+                >
+                  {{- block.settings.btn_txt -}}
+                </a>
+              {% endif %}
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  <script defer>
+    // When the user scrolls the page, execute myFunction 
+    {% comment %} window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 200;
+      document.getElementById("myBar").style.height = scrolled + "%";
+    } {% endcomment %}
+
+    {% comment %} const progress = document.querySelectorAll('.progress-bars');
+    document.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      const width = document.documentElement.scrollHeight - window.innerHeight;
+      const progressWidth = Math.floor(100 * scroll / width);
+    progress.style.height = `${progressWidth}%`;
+    }, { passive: true }) {% endcomment %}
+
+
+    {% comment %} window.addEventListener("scroll", handleProgressBars);
+
+    function handleProgressBars() {
+      const sections = document.querySelectorAll(".half-grids-img");
+      sections.forEach((section, index) => {
+        const progressBar = document.getElementById(`progressBar${index + 1}`);
+        const progressBarFill = document.getElementById(`progressBarFill${index + 1}`);
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.body.clientHeight;
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const scrolled = window.scrollY;
+        const scrolledFromSectionTop = scrolled - sectionTop;
+        const scrolledPercent = (scrolledFromSectionTop / (sectionHeight - windowHeight)) * 10;
+  
+        if (scrolledPercent > 0 && scrolledFromSectionTop >= 0) {
+          progressBar.style.display = "block";
+          progressBarFill.style.height = `${scrolledPercent}%`;
+        } else {
+          progressBar.style.display = "none";
+        }
+      });
+    } {% endcomment %}
+
+
+    {% comment %} const sections = document.querySelectorAll(".half-blocks");
+    const progressLineContainer = document.getElementById("progressLineContainer");
+    const progressLine = document.getElementById("progressLine");
+  
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Calculate the progress line width based on the percentage of visibility
+          const progressWidth = (entry.intersectionRatio * 100).toFixed(2) + "%";
+          progressLine.style.width = progressWidth;
+        } else {
+          // If the section is no longer at the top, reset the progress line width
+          progressLine.style.width = "0";
+        }
+      });
+    }, options);
+  
+    sections.forEach(section => {
+      observer.observe(section);
+    }); {% endcomment %}
+    
+
+    </script>
+{% endif %}
+{% schema %}
+{
+  "name": "Half Image With Text",
+  "class": "spotlight-with-slider",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "spotslider",
+      "name": "Add Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Image",
+          "info": "For Better Viewing Use Example dimentions: 1080*1350 ( Aspect Ratio: 1.5 )"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Mobile Image",
+          "info": "For Better Viewing Use Example dimentions: 585*711 ( Aspect Ratio: 1.5 )"
+        },
+        {
+          "type": "header",
+          "content": "Block Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "richtext",
+          "label": "Discription"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "header",
+          "content": "Block Color"
+        },
+        {
+          "type": "header",
+          "content": "styling"
+        },
+        {
+          "type": "color_background",
+          "id": "block_bg_color",
+          "label": "Background Color",
+          "default": "linear-gradient(137deg, #E3EFF5 1.08%, #E1E1E1 54.69%, #C9C9C9 98.96%)"
+        },
+        {
+          "type": "color",
+          "id": "block_text_color",
+          "label": "Text Color",
+          "default": "#2B3033"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Half Image With Text",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

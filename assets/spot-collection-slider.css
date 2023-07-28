@@ -1,0 +1,52 @@
+.spot-slider-list .swiper-slide {
+    transform: scale(0.95, 0.63);
+    transition: transform 300ms ease-in-out 0.1s;
+}
+.spot-slider-list .swiper-slide.swiper-slide-active{
+    transform: scale(1);
+}
+.spot-slider-list .spot-card .spot-title {
+    font-size: 14.8vw;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 1px var(--bs-color-blue);
+    color: transparent;
+    margin: 0 0 -20px;
+    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.spot-slider-list .second-img {
+    max-width: 44vw;
+    margin-top: -22%;
+}
+.spot-slider-list .spot-coll-title{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.explore-link{
+    z-index: 1;
+}
+
+@media (min-width: 992px) {
+    .spot-slider-list .swiper-slide {
+        transform: scale(0.67, 0.62);
+    }
+    .spot-slider-list .swiper-slide .spot-title{
+        font-size: 100px;
+        margin: 0 0 -25px;
+    }
+    .spot-slider-list .second-img{
+        max-width: 26.182vw;
+    }
+    .spot-slider-list .second-img {
+        margin-top: -24%;
+    }
+    .spot-slider-list .spot-coll-title{
+        padding-top: 2px !important;
+    }
+}

@@ -1,6 +1,7 @@
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icon-fluid' !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -13,16 +14,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-menu:before {
+.icon-arrow-left:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
   content: "\e901";
 }
-.icon-previous:before {
+.icon-btn-arrow-left:before {
   content: "\e902";
 }
-.icon-next:before {
+.icon-btn-arrow:before {
   content: "\e903";
 }
-.icon-bag:before {
+.icon-cart:before {
   content: "\e904";
 }
 .icon-close:before {
@@ -31,84 +35,35 @@
 .icon-facebook:before {
   content: "\e906";
 }
-.icon-instagram:before {
+.icon-Instagram:before {
   content: "\e907";
 }
-.icon-pinterest:before {
+.icon-linkedin:before {
   content: "\e908";
 }
-.icon-search:before {
+.icon-menu:before {
   content: "\e909";
 }
-.icon-twitter:before {
+.icon-search:before {
   content: "\e90a";
 }
-.icon-youtube:before {
+.icon-star:before {
   content: "\e90b";
 }
-.icon-user:before {
+.icon-tick-tok:before {
   content: "\e90c";
 }
-.icon-plus:before {
+.icon-Twitter:before {
   content: "\e90d";
 }
-.icon-check:before {
+.icon-user:before {
   content: "\e90e";
 }
-.icon-youtube-new:before {
-  content: "\e910";
-}
-.icon-free-shipping:before {
-  content: "\e911";
-}
-.icon-minus:before {
-  content: "\e912";
-}
-.icon-google-plus:before {
-  content: "\e913";
-}
-.icon-arrow-up:before {
-  content: "\e914";
-}
-.icon-arrow-down:before {
-  content: "\e915";
-}
-.icon-arrow-right:before {
-  content: "\e916";
-}
-.icon-arrow-left:before {
-  content: "\e917";
-}
-.icon-play:before {
-  content: "\e918";
-}
-.icon-pause:before {
+.icon-Youtube:before {
   content: "\e90f";
 }
-.icon-zoom:before {
-  content: "\e900";
-}
-.icon-filters:before {
-  content: "\e919";
-}
-.icon-quickview:before {
-  content: "\e91a";
-}
 
-.icon-email:before {
-  content: "\e91b";
-}
-.icon-location:before {
-  content: "\e91c";
-}
-.icon-phone:before {
-  content: "\e91d";
-}
-.icon-time:before {
-  content: "\e91e";
-}
-
-.icon-size-10{ font-size: 10px; }
+.icon-size-10{ font-size: 10px; height: 10px; width: 10px;}
 .icon-size-12{ font-size: 12px; }
 .icon-size-14{ font-size: 14px; }
 .icon-size-16{ font-size: 16px; }

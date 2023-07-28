@@ -39,17 +39,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="shadow">
-                    <div class="bg-dark py-9">
-
-                    </div>
-                    <div class="py-3 px-2 ">
-                        <p class="font-size-xs text-uppercase fw-bold mb-1">Dark</p>
-                        <p class="font-size-xs mb-0 text-gray-500">{{ settings.color_dark }}</p>    
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -79,28 +68,6 @@
                 </div>
             </div>
  
-            <div class="col-3">
-                <div class="bg-secondary-500 py-1 px-3 text-black text-end text-uppercase">
-                    {{ settings.color_secondary_500 }}
-                </div>
-
-                <div class="bg-secondary-400 py-1 px-3 text-black text-end text-uppercase">
-                    {{ settings.color_secondary_400 }}
-                </div>
-
-                <div class="bg-secondary-300 py-1 px-3 text-black text-end text-uppercase">
-                    {{ settings.color_secondary_300 }}
-                </div>
-
-                <div class="bg-secondary-200 py-1 px-3 text-black text-end text-uppercase">
-                    {{ settings.color_secondary_200 }}
-                </div>
-
-                <div class="bg-secondary-100 py-1 px-3 text-black text-end text-uppercase">
-                    {{ settings.color_secondary_100 }}
-                </div>
-            </div>
-
             <div class="col-3">
                 <div class="bg-black py-1 px-3 text-white text-end text-uppercase">
                     {{ settings.color_black }}
@@ -147,34 +114,57 @@
         </div>
     </div>
 
+
     <div class="container mb-10">
         <p class="mb-3 text-gray-400">Secondary Color Palette</p>
         <div class="row row-cols-7">
             <div class="col">
                 <div class="shadow">
-                    <div class="bg-almond py-9">
+                    <div class="bg-red py-9">
 
                     </div>
                     <div class="py-3 px-2 ">
-                        <p class="font-size-xs text-uppercase fw-bold mb-1">ALMOND</p>
-                        <p class="font-size-xs mb-0 text-gray-500">#FAE2CC</p>    
+                        <p class="font-size-xs text-uppercase fw-bold mb-1">Red</p>
+                        <p class="font-size-xs mb-0 text-gray-500">{{ settings.color_red }}</p>    
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="shadow">
-                    <div class="bg-primary py-9">
+                    <div class="bg-purple py-9">
 
                     </div>
                     <div class="py-3 px-2 ">
-                        <p class="font-size-xs text-uppercase fw-bold mb-1">SALE PRICE</p>
-                        <p class="font-size-xs mb-0 text-gray-500">#C44313</p>    
+                        <p class="font-size-xs text-uppercase fw-bold mb-1">Purple</p>
+                        <p class="font-size-xs mb-0 text-gray-500">{{ settings.color_purple }}</p>    
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="shadow">
+                    <div class="bg-green py-9">
+
+                    </div>
+                    <div class="py-3 px-2 ">
+                        <p class="font-size-xs text-uppercase fw-bold mb-1">Green</p>
+                        <p class="font-size-xs mb-0 text-gray-500">{{ settings.color_green }}</p>    
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="shadow">
+                    <div class="bg-blue py-9">
+
+                    </div>
+                    <div class="py-3 px-2 ">
+                        <p class="font-size-xs text-uppercase fw-bold mb-1">Blue</p>
+                        <p class="font-size-xs mb-0 text-gray-500">{{ settings.color_blue }}</p>    
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mt-10 border-top d-block"></div>
-    </div>    
+    </div>
+
 
     <div class="container mb-10">
         <p class="mb-3 text-gray-400">Typography</p>
@@ -188,26 +178,6 @@
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled m-0 font-family-heading">
-                                <li class="fw-light">Light</li>
-                                <li class="fw-regular">Regular</li>
-                                <li class="fw-medium">Medium</li>
-                                <li class="fw-semibold">Semi Bold</li>
-                                <li class="fw-bold">Bold</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card shadow p-4 border-0">
-                    <div class="row">
-                        <div class="col-6">
-                            <h1 class="font-family-base">Aa</h1>
-                            <h6 class="font-family-base">{{ settings.type_body_font }}</h6>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled m-0 font-family-base">
-                                <li class="fw-light">Light</li>
                                 <li class="fw-regular">Regular</li>
                                 <li class="fw-medium">Medium</li>
                                 <li class="fw-semibold">Semi Bold</li>
@@ -356,20 +326,34 @@
                 <ul class="list-group list-unstyled">
                     <li class="mb-3">
                         <p><kbd>btn btn-primary</kbd></p>
-                        <a href="" class="btn btn-primary">Shop Now</a>
+                        <a href="" class="btn btn-primary">
+                            <i class="icon-btn-arrow icon-size-10"></i>
+                            Shop Now
+                        </a>
                     </li>
                     <li class="mb-3">
+                        <span class="p-5 bg-primary-400 d-inline-block">
                         <p><kbd>btn btn-secondary</kbd></p>
-                        <a href="" class="btn btn-secondary">Shop Now</a>
+                        <a href="" class="btn btn-secondary">
+                            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.38895 1.38889L11.0001 5M11.0001 5L7.66673 8.33333M11.0001 5H1.00006" stroke="#2B3033" stroke-linecap="square"/>
+                            </svg>
+                            <span>
+                            Shop Now
+                            </span>
+                        </a>
+                        </span>
                     </li>
                     <li class="mb-3">
-                        <p><kbd>btn btn-dark</kbd></p>
-                        <a href="" class="btn btn-dark">Shop Now</a>
+                        <span class="p-5 bg-primary-400 d-inline-block">
+                        <p><kbd>btn btn-outline-primary</kbd></p>
+                        <a href="" class="btn btn-outline-primary">Shop Now</a>
+                        </span>
                     </li>
                     <li class="">
                         <span class="p-5 bg-primary-400 d-inline-block">
-                            <p><kbd>btn btn-white</kbd></p>
-                            <a href="" class="btn btn-white">Shop Now</a>
+                            <p><kbd>btn btn-outline-secondary</kbd></p>
+                            <a href="" class="btn btn-outline-secondary">Shop Now</a>
                         </span>
                     </li>
                 </ul>
@@ -395,17 +379,21 @@
                         <a href="" class="btn btn-lg btn-primary">Shop Now</a>
                     </li>
                     <li class="mb-3">
+                        <span class="p-5 bg-primary-400 d-inline-block">
                         <p><kbd>btn btn-secondary btn-lg</kbd></p>
                         <a href="" class="btn btn-lg btn-secondary">Shop Now</a>
+                        </span>
                     </li>
                     <li class="mb-3">
-                        <p><kbd>btn btn-dark btn-lg</kbd></p>
-                        <a href="" class="btn btn-lg btn-dark">Shop Now</a>
+                        <span class="p-5 bg-primary-400 d-inline-block">
+                        <p><kbd>btn btn-outline-primary btn-lg</kbd></p>
+                        <a href="" class="btn btn-lg btn-outline-primary">Shop Now</a>
+                        </span>
                     </li>
                     <li class="">
                         <span class="p-5 bg-primary-400 d-inline-block">
-                            <p><kbd>btn btn-white btn-lg</kbd></p>
-                            <a href="" class="btn btn-lg btn-white">Shop Now</a>
+                            <p><kbd>btn btn-outline-secondary btn-lg</kbd></p>
+                            <a href="" class="btn btn-lg btn-outline-secondary">Shop Now</a>
                         </span>
                     </li>
                     
@@ -425,17 +413,21 @@
                         <a href="" class="btn btn-sm btn-primary">Shop Now</a>
                     </li>
                     <li class="mb-3">
+                        <span class="p-5 bg-primary-400 d-inline-block">
                         <p><kbd>btn btn-secondary btn-sm</kbd></p>
                         <a href="" class="btn btn-sm btn-secondary">Shop Now</a>
+                        </span>
                     </li>
                     <li class="mb-3">
-                        <p><kbd>btn btn-dark btn-sm</kbd></p>
-                        <a href="" class="btn btn-sm btn-dark">Shop Now</a>
+                        <span class="p-5 bg-primary-400 d-inline-block">
+                        <p><kbd>btn btn-outline-primary btn-sm</kbd></p>
+                        <a href="" class="btn btn-sm btn-outline-primary">Shop Now</a>
+                        </span>
                     </li>
                     <li class="">
                         <span class="p-5 bg-primary-400 d-inline-block">
-                            <p><kbd>btn btn-white btn-sm</kbd></p>
-                            <a href="" class="btn btn-sm btn-white">Shop Now</a>
+                            <p><kbd>btn btn-outline-secondary btn-sm</kbd></p>
+                            <a href="" class="btn btn-sm btn-outline-secondary">Shop Now</a>
                         </span>
                     </li>
                 </ul>
@@ -450,14 +442,19 @@
 
         <div class="col-12 pb-10">
             <p><kbd>btn-link</kbd></p>
-            <a href="" class="btn-link">Shop Now</a>
+            <a href="" class="btn-link fw-semibold">
+            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.38895 1.38889L11.0001 5M11.0001 5L7.66673 8.33333M11.0001 5H1.00006" stroke="#2B3033" stroke-linecap="square"/>
+            </svg>
+            Shop Now
+            </a>
         </div>
 
         <div class=" border-top d-block"></div>
     </div>
 
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             <div class="col-md-4">
                 <h6 class="text-uppercase mb-3 fw-bold">Floating Form</h6>
@@ -483,7 +480,7 @@
                 <h6 class="text-uppercase mb-3 fw-bold">Newsletter</h6>
                 <div class="input-group">
                     <input type="email" class="form-control border-end-0" id="exampleFormControlInput1" placeholder="name@example.com">
-                    <button type="submit" name="btnSubmit" aria-label="submit" class="btn btn-secondary">
+                    <button type="submit" name="btnSubmit" aria-label="submit" class="btn btn-primary btn-sm">
                         <span>sign up</span>
                     </button>     
                 </div>
@@ -491,6 +488,23 @@
         </div>
         
     </div>
+
+    <div class="container">
+        <div class="row">
+             <div>
+                <h6 class="text-uppercase mb-3 fw-bold">Badge</h6>
+              <div class="d-flex">
+                <span class="badge badge-green">Deal</span>
+                <span class="badge badge-purple ms-4">new</span>
+                <span class="badge badge-primary ms-4">low in stock</span>
+                <span class="badge badge-blue ms-4">best seller</span>
+                <span class="badge badge-primary-300 ms-4">out of stock</span>
+               </div>
+            </div>
+        </div>
+        
+    </div>
+    
 </div>
 
 

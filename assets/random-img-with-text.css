@@ -1,0 +1,11 @@
+.random-block .random-content{
+    max-width: 615px;
+}
+@media (min-width: 992px){
+    .block-two .random-content{
+        order: 1;
+    }
+    .random-block .block-two > div{
+        padding-left: 3px;
+    }
+}

@@ -1,9 +1,97 @@
 {
   "current": {
+    "body_color": "#2b3033",
+    "heading_color": "#2b3033",
+    "link_color": "#2b3033",
+    "link_hover_color": "#2b3033",
+    "color_border": "#cfd1d1",
+    "color_primary": "#2b3033",
+    "color_secondary": "#f2f2f2",
+    "color_primary_100": "#cfd1d1",
+    "color_primary_200": "#b8babb",
+    "color_primary_300": "#898c8d",
+    "color_primary_400": "#5a5e60",
+    "color_primary_500": "#2b3033",
+    "color_purple": "#5d4d6a",
+    "color_green": "#07b376",
+    "color_blue": "#105e7c",
+    "color_gray_100": "#eaeaeb",
+    "color_gray_200": "#d5d6d6",
+    "color_gray_300": "#bfc1c2",
+    "color_gray_400": "#aaacad",
+    "color_gray_500": "#959799",
+    "color_gray_600": "#808385",
+    "color_gray_700": "#6b6e70",
+    "color_gray_800": "#55595c",
+    "color_gray_900": "#404447",
+    "color_success": "#07b376",
+    "color_danger": "#d92211",
+    "color_info": "#105e7c",
+    "type_header_font": "Plus Jakarta Sans",
+    "type_secondary_font": "Plus Jakarta Sans",
+    "style_header_font": "normal",
+    "type_header_font_weight": "700",
+    "type_heading_line_height": "1.33",
+    "type_body_font": "Plus Jakarta Sans",
+    "type_body_font_weight": "400",
+    "type_body_line_height": "1.56",
+    "type_body_letter_spacing": "0",
+    "lg_font_size": "20px",
+    "xl_font_size": "22px",
+    "h1_font_size": "45px",
+    "h2_font_size": "40px",
+    "h3_font_size": "30px",
+    "h4_font_size": "24px",
+    "h5_font_size": "20px",
+    "h6_font_size": "16px",
+    "h1_font_size_md": "39px",
+    "h2_font_size_md": "32px",
+    "h3_font_size_md": "28px",
+    "h4_font_size_md": "22px",
+    "h5_font_size_md": "19px",
+    "h1_font_size_sm": "34px",
+    "h2_font_size_sm": "30px",
+    "h4_font_size_sm": "20px",
+    "h5_font_size_sm": "18px",
+    "type_button_font": "Plus Jakarta Sans",
+    "type_button_font_weight": "600",
+    "button_font_size": "14px",
+    "button_line-height": "18px",
+    "button_letter_spacing": "-0.1px",
     "button_border-width": "1px",
-    "type_input_font_weight": "300",
-    "favicon": "shopify:\/\/shop_images\/logo-fluid_63914a68-c1ae-461f-98f2-f4a84060ac5f.png",
-    "main_logo_socials": "shopify:\/\/shop_images\/wp3850825-4k-pc-wallpapers.jpg",
+    "button_x_padding": "25px",
+    "button_y_padding": "11px",
+    "button_x_padding_sm": "9px",
+    "button_y_padding_sm": "5px",
+    "button_x_padding_lg": "33px",
+    "button_y_padding_lg": "17px",
+    "txt_color_btn_primary": "#ffffff",
+    "bg_color_btn_primary": "#2b3033",
+    "bg_hover_color_btn_primary": "#2b3033",
+    "txt_color_btn_secondary": "#2b3033",
+    "bg_color_btn_secondary": "#ffffff",
+    "bg_hover_color_btn_secondary": "#ffffff",
+    "type_input_font": "Plus Jakarta Sans",
+    "type_input_font_weight": "400",
+    "input_line-height": "25px",
+    "input_border-radius": "0",
+    "input_x_padding": "20px",
+    "input_y_padding": "7.5px",
+    "input_text_color": "#2b3033",
+    "input_ph_text_color": "#898c8d",
+    "input_border_color": "#cfd1d1",
+    "input_font_size_sm": "16px",
+    "input_x_padding_sm": "20px",
+    "input_y_padding_sm": "8px",
+    "input_font_size_lg": "16px",
+    "input_y_padding_lg": "8px",
+    "container_width": "1290px",
+    "favicon": "shopify:\/\/shop_images\/Rectangle49_3.jpg",
+    "main_logo_socials": "shopify:\/\/shop_images\/feature-icon1_9670e7e9-fcc8-436c-94fa-a81c3348de6c.png",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "enable_cart_drawer": true,
     "enable_search": true,
     "enable_swatches": true,
@@ -19,6 +107,10 @@
     "enable_custom_countdown": true,
     "enable_newletter": false,
     "enable_custom_klaviyo": false,
+    "enable_product_card_swatches": false,
+    "show_secondary_image": false,
+    "show_vendor": false,
+    "custom_badges": "",
     "enable_cart_notes": true,
     "enable_shipping_bar": true,
     "free_shipping_txt": "Congratulations! You get free shipping.",
@@ -26,80 +118,120 @@
     "checkout_logo_image": "shopify:\/\/shop_images\/logo-fluid.png",
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
+    "txt_color_btn_white": "#2b3033",
+    "bg_hover_color_btn_white": "#2b3033",
+    "bg_color_btn_dark": "#2b3033",
+    "bg_hover_color_btn_dark": "#2b3033",
+    "color_dark": "#2b3033",
+    "color_alabaster": "#ff0000",
+    "color_almond": "#ff0000",
+    "color_secondary_100": "#ff0000",
+    "color_secondary_500": "#ff0000",
     "enable_login": true,
     "sections": {
       "header": {
         "type": "header",
         "blocks": {
-          "121df697-f913-49f3-b503-4268235000d0": {
-            "type": "megamenu",
+          "8ce60a01-6d3c-4d8b-b7aa-27ca70aa044b": {
+            "type": "random_columns",
             "settings": {
-              "title": "Men",
-              "image": "shopify:\/\/shop_images\/1_0ae182fa-8c71-468e-850b-23fc81cb3bf4.jpg",
-              "link_text": "Shop Now",
-              "link_url": "shopify:\/\/collections\/men"
-            }
-          },
-          "791f0d9a-5f5f-4938-af7d-0811b105b3ff": {
-            "type": "megamenu",
-            "settings": {
-              "title": "Women",
-              "image": "shopify:\/\/shop_images\/1_d8a840f3-d40e-4d28-8191-715f1a7874e4.jpg",
-              "link_text": "Shop Now",
-              "link_url": "shopify:\/\/collections\/women"
+              "title": "drones",
+              "image": "shopify:\/\/shop_images\/Rectangle_77.jpg",
+              "link_text": "drone nerds recommends",
+              "link_url": "shopify:\/\/products\/gift-card",
+              "image_2": "shopify:\/\/shop_images\/Rectangle_77.jpg",
+              "link_text_2": "DJI refurbished",
+              "link_url_2": "shopify:\/\/collections\/trading-collections"
             }
           }
         },
         "block_order": [
-          "121df697-f913-49f3-b503-4268235000d0",
-          "791f0d9a-5f5f-4938-af7d-0811b105b3ff"
+          "8ce60a01-6d3c-4d8b-b7aa-27ca70aa044b"
         ],
         "settings": {
           "fluid_header": false,
           "enable_sticky_header": true,
           "header_bg_color": "#ffffff",
           "show_line_separator": false,
-          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0581\/7663\/5061\/files\/logo-fluid.svg?v=1631096036",
-          "logo_width": 130,
-          "menu": "footer"
+          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/Logo.svg?v=1689570211",
+          "logo_width": 235,
+          "menu": "main-menu"
         }
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "3c760630-2ab4-4590-af03-2395e5d09217": {
+            "type": "footerlinks",
+            "settings": {
+              "f_name": "Guides & Support",
+              "f_link": "shopify:\/\/pages\/about-us"
+            }
+          },
+          "864851d7-ad6d-47ef-9092-3a2443a09f56": {
+            "type": "footerlinks",
+            "settings": {
+              "f_name": "Privacy Policy",
+              "f_link": "shopify:\/\/pages\/guidelines"
+            }
+          },
+          "2319f70e-190d-4d4c-93bf-c385397c02a8": {
+            "type": "footerlinks",
+            "settings": {
+              "f_name": "Terms & Conditions",
+              "f_link": "shopify:\/\/pages\/contact"
+            }
+          }
+        },
+        "block_order": [
+          "3c760630-2ab4-4590-af03-2395e5d09217",
+          "864851d7-ad6d-47ef-9092-3a2443a09f56",
+          "2319f70e-190d-4d4c-93bf-c385397c02a8"
+        ],
         "settings": {
           "fluid_footer": false,
-          "footer_top_bg_color": "#faf4f0",
-          "footer_top_txt_color": "#000000",
-          "footer_top_link_color": "#000000",
-          "footer_bottom_bg_color": "#faf4f0",
-          "footer_bottom_txt_color": "#000000",
-          "footer_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0581\/7663\/5061\/files\/logo-fluid.svg?v=1631096036",
-          "logo_max_width": 180,
-          "col_1_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.<\/p>",
-          "col_2_heading": "Customer Care",
-          "footer_linklist_col_2": "main-menu",
-          "col_3_heading": "Info",
-          "footer_linklist_col_3": "learn",
-          "col_4_heading": "Discover",
-          "footer_linklist_col_4": "footer-menu",
-          "col_5_heading": "Subscribe",
-          "col_5_txt": "Get monthly updates and free resources.",
+          "footer_top_bg_color": "#2b3033",
+          "footer_top_txt_color": "#ffffff",
+          "footer_top_link_color": "#ffffff",
+          "footer_bottom_bg_color": "#2b3033",
+          "footer_bottom_txt_color": "#ffffff",
+          "footer_newsletter_bg_color": "#f2f2f2",
+          "footer_newsletter_txt_color": "#2b3033",
+          "footer_bg_banner": "shopify:\/\/shop_images\/Group_8775.png",
+          "newsletter_heading": "hey, how about  free shipping?",
+          "newsletter_txt": "Sign up for our newsletter and get free shipping on your next order",
           "show_newsletter": true,
+          "success_message": "<p>Thank you for signing up! Your special offer is on its way!<\/p>",
+          "footer_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/Mask_group.svg?v=1690181480",
+          "logo_max_width": 95,
+          "col_1_text": "DroneNerds.com is the largest UAV dealer in the United States and we are DJI's largest and most experienced authorized service center in the United States.",
+          "footer_second_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/Logo_Drone_Nerds.svg?v=1690184777",
+          "logo_second_max_width": 295,
+          "col_2_heading": "Products",
+          "footer_linklist_col_2": "footer-grid-1",
+          "col_3_heading": "customer support",
+          "footer_linklist_col_3": "footer-grid-2",
+          "col_4_heading": "company",
+          "footer_linklist_col_4": "footer-grid-3",
           "show_social_links": true,
           "col_5_social_heading": "Connect with Us",
           "social_icon_facebook": true,
           "social_icon_twitter": true,
           "social_icon_instagram": true,
           "social_icon_youtube": true,
-          "bottom_footer_linklist": "bottom-footer-nav",
-          "show_payment_icons": true,
+          "social_icon_linkedin": true,
+          "social_icon_pinterest": true,
+          "social_icon_tiktok": true,
+          "show_payment_icons": false,
           "payment_icon_visa": true,
           "payment_icon_mastercard": true,
           "payment_icon_ae": true,
           "payment_icon_diners": true,
           "payment_icon_paypal": true,
           "payment_icon_applepay": true,
-          "payment_icon_amazonpay": true
+          "payment_icon_amazonpay": true,
+          "payment_icon_afterpay": true,
+          "payment_icon_shopPay": true
         }
       },
       "newsletter": {
@@ -128,17 +260,54 @@
       },
       "mobile-nav-drawer": {
         "type": "mobile-nav-drawer",
+        "blocks": {
+          "f045d5fc-169a-47ef-b22d-b76da50e115c": {
+            "type": "random_columns",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_77.jpg",
+              "link_text": "our best sellers",
+              "link_url": "shopify:\/\/products\/the-compare-at-price-snowboard"
+            }
+          },
+          "e2bec312-8ac9-4102-a897-96ce1c007888": {
+            "type": "random_columns",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_77.jpg",
+              "link_text": "our best sellers",
+              "link_url": "shopify:\/\/products\/the-compare-at-price-snowboard"
+            }
+          },
+          "bb088f0d-9fe7-4934-a2ea-3dc6df345288": {
+            "type": "random_columns",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_77.jpg",
+              "link_text": "our best sellers",
+              "link_url": "shopify:\/\/products\/the-compare-at-price-snowboard"
+            }
+          },
+          "320a2a47-9d66-49df-a30e-f67a57374008": {
+            "type": "random_columns",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_77.jpg",
+              "link_text": "our best sellers",
+              "link_url": "shopify:\/\/products\/the-compare-at-price-snowboard"
+            }
+          }
+        },
+        "block_order": [
+          "f045d5fc-169a-47ef-b22d-b76da50e115c",
+          "e2bec312-8ac9-4102-a897-96ce1c007888",
+          "bb088f0d-9fe7-4934-a2ea-3dc6df345288",
+          "320a2a47-9d66-49df-a30e-f67a57374008"
+        ],
         "settings": {
-          "logo_svg": "",
-          "logo": "shopify:\/\/shop_images\/logo-fluid_ac600564-01a4-4f9a-8f2a-47a0f47ff075.png",
-          "logo_width": 100,
-          "main_menu_linklist": "footer",
-          "secondary_menu_linklist": "main-menu",
-          "mobilemenu_style": "slide-submenu",
-          "mobile_nav_show_social_links": true,
+          "main_menu_linklist": "main-menu",
+          "secondary_menu_linklist": "secondary-menu",
+          "show_social_links": true,
           "social_icon_facebook": true,
           "social_icon_twitter": true,
-          "social_icon_instagram": true
+          "social_icon_instagram": true,
+          "social_icon_youtube": true
         }
       },
       "search-layer": {
@@ -150,11 +319,11 @@
         "type": "top-header",
         "settings": {
           "topbar_enabled": true,
-          "topbar_text": "SAME DAY SHIPPING! ORDER BY 2PM (EASTERN TIME)",
-          "topbar_bg_color": "#d29c7d",
+          "topbar_text": "Free shipping over $599",
+          "topbar_bg_color": "#105e7c",
           "topbar_text_color": "#ffffff",
-          "topbar_height": 40,
-          "topbar_font_size": "15px"
+          "topbar_height": 35,
+          "topbar_font_size": "12px"
         }
       }
     },

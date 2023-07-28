@@ -53,6 +53,7 @@
     right: 0;
     margin: 0 auto;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .full-video-layout.playing--video .full-video-caption {

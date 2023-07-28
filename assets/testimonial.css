@@ -1,0 +1,51 @@
+.testimonial-section .swiper-slide > div.h6::before{
+    content: "";
+    height: 5px;
+    width: 5px;
+    background: currentColor;
+    border-radius: 100px;
+    display: block;
+    margin: auto 10px auto;
+}
+.testimonial-section .arrow {
+    position: absolute;
+    right:25px;
+    bottom: 0;
+    z-index: 2;
+}
+.testimonial-section .arrow [class^="swiper-button"] {
+    position: static;
+    transform: none;
+    margin: 4px;
+}
+.testimonial-section .testi-with-banner{
+    margin-bottom: -2px;
+}
+.testi-slider-list .swiper-slide .rictext{
+    font-size: 18px;
+    line-height: 2;
+}
+.testi-with-banner .link-banner img {
+    aspect-ratio: 1/1.25;
+}
+
+@media (max-width: 767px){
+    .testimonial-section .swiper-slide > div{
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px){
+    .testi-slider-list .swiper-slide .rictext{
+        font-size: 20px;
+    }
+    .testimonial-section .arrow{
+        right: 32px;
+    }
+  .testi-with-banner .link-banner img {
+    transform:scale3d(1, 1, 1);
+    transition:all 300ms ease-in-out;
+}
+  .testi-with-banner .banner-img:hover .link-banner img{
+    transform:scale(1.05);
+  }
+}

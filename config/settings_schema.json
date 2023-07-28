@@ -67,24 +67,6 @@
         "label": "Color Secondary"
       },
       {
-        "type": "color",
-        "id": "color_dark",
-        "default": "#212529",
-        "label": "Color Dark"
-      },
-      {
-        "type": "color",
-        "id": "color_alabaster",
-        "default": "#fafaf7",
-        "label": "Color Alabaster"
-      },
-      {
-        "type": "color",
-        "id": "color_almond",
-        "default": "#FAE2CC",
-        "label": "Color Almond"
-      },
-      {
         "type": "header",
         "content": "Primary Color Tints"
       },
@@ -124,33 +106,27 @@
       },
       {
         "type": "color",
-        "id": "color_secondary_100",
-        "default": "#FDFBF9",
-        "label": "Secondary 100"
+        "id": "color_red",
+        "default": "#D92211",
+        "label": "Red Color"
       },
       {
         "type": "color",
-        "id": "color_secondary_200",
+        "id": "color_purple",
         "default": "#F8EDE7",
-        "label": "Secondary 200"
+        "label": "Purple Color"
       },
       {
         "type": "color",
-        "id": "color_secondary_300",
+        "id": "color_green",
         "default": "#F8EDE7",
-        "label": "Secondary 300"
+        "label": "Green Color"
       },
       {
         "type": "color",
-        "id": "color_secondary_400",
+        "id": "color_blue",
         "default": "#F5E4DB",
-        "label": "Secondary 400"
-      },
-      {
-        "type": "color",
-        "id": "color_secondary_500",
-        "default": "#F2DBCF",
-        "label": "Secondary 500"
+        "label": "Blue Color"
       },
       {
         "type": "header",
@@ -717,50 +693,6 @@
         "id": "bg_hover_color_btn_secondary",
         "default": "#D29C7D",
         "label": "Secondary Button Hover Color"
-      },
-      {
-        "type": "header",
-        "content": "Button White"
-      },
-      {
-        "type": "color",
-        "id": "txt_color_btn_white",
-        "default": "#000000",
-        "label": "White Button Text Color"
-      },
-      {
-        "type": "color",
-        "id": "bg_color_btn_white",
-        "default": "#ffffff",
-        "label": "White Button BG Color"
-      },
-      {
-        "type": "color",
-        "id": "bg_hover_color_btn_white",
-        "default": "#221F20",
-        "label": "White Button Hover Color"
-      },
-      {
-        "type": "header",
-        "content": "Button Dark"
-      },
-      {
-        "type": "color",
-        "id": "txt_color_btn_dark",
-        "default": "#ffffff",
-        "label": "Dark Button Text Color"
-      },
-      {
-        "type": "color",
-        "id": "bg_color_btn_dark",
-        "default": "#000000",
-        "label": "Dark Button BG Color"
-      },
-      {
-        "type": "color",
-        "id": "bg_hover_color_btn_dark",
-        "default": "#222222",
-        "label": "Dark Button Hover Color"
       }
     ]
   },

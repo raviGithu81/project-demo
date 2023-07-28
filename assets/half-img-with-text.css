@@ -1,0 +1,60 @@
+.half-grids-img .half-blocks{
+    min-height: 121vw;
+}
+.half-grids-img .half-content{
+    max-width: 245px;
+}
+.half-grids-img .half-content:after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    height: 150vh;
+    width: 0.5px;
+    background: currentColor;
+    top: 3px;
+}
+
+/* .progress-line-container{
+    position: absolute;
+    left: 60px;
+    width: 5px;
+    top: 13px;
+    z-index: 1;
+    height: 100%;
+}
+.progress-line{
+    background-color: red;
+    min-width: 5px;
+    display: block !important;
+}
+
+#progressBar2{
+    left: 60px;
+} */
+
+.half-grids-img > div:nth-child(2) .half-content:after{
+    bottom: 0;
+    top: auto;
+}
+
+@media (max-width: 991px) {
+    .half-grids-img .half-blocks:nth-child(2){
+        min-height: 138vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .half-grids-img .spot-title{
+        line-height: normal;
+    }
+    .half-grids-img .half-blocks{
+        min-height: 62.5vw;
+    }
+    .half-grids-img .half-content{
+        max-width: 330px;
+    }
+    .half-grids-img .half-content:after {
+        left: -20px;
+        top: 13px;
+    }
+}

@@ -1,0 +1,316 @@
+{% if section.settings.enabled != blank %}
+  {{ 'testimonial.css' | asset_url | stylesheet_tag }}
+  <section
+    class="section-content testimonial-section"
+    data-section-id="{{ section.id }}"
+    style="background-color: {{ section.settings.block_bg_color }}; color: {{ section.settings.block_text_color }};"
+  >
+    <div class="container py-lg-1">
+      <div class="row testi-with-banner">
+        <div class="col-12 col-xl-10 mx-lg-auto pe-lg-4">
+          <div class="row">
+            <div class="col-12 col-md-7 my-lg-auto position-relative mb-6 mb-md-0">
+              {% if section.settings.title != blank %}
+                <div class="h3 mb-3 mt-lg-n3 pb-1 pt-lg-1" style="color: {{ section.settings.block_text_color }};">
+                  {{ section.settings.title }}
+                </div>
+              {% endif %}
+
+              <slider-element class="swiper-container carousel">
+                <div
+                  class="swiper swiper-slider testi-slider-list"
+                  data-slider='
+                    {
+                        "loop": false,
+                        "grabCursor": true,
+                        "allowTouchMove": true,
+                        "speed": 500,
+                        "effect": "fade",
+                        "fadeEffect": {
+                          "crossFade": "false"
+                          },
+                        "navigation": {
+                          "nextEl": ".testi-button-next",
+                          "prevEl": ".testi-button-prev"
+                      },
+                      "thumbs": {
+                        "swiper": ".test-with-banner"
+                      }
+                    }
+                  '
+                >
+                  <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'testimonial' %}
+                      <div class="swiper-slide">
+                        <svg
+                          class="mb-4 mb-md-2"
+                          width="98"
+                          height="18"
+                          viewBox="0 0 98 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M8.52447 1.46353C8.67415 1.00287 9.32585 1.00287 9.47553 1.46353L10.9084 5.87336C10.9753 6.07937 11.1673 6.21885 11.3839 6.21885H16.0207C16.505 6.21885 16.7064 6.83865 16.3146 7.12336L12.5633 9.84878C12.3881 9.9761 12.3148 10.2018 12.3817 10.4078L13.8145 14.8176C13.9642 15.2783 13.437 15.6613 13.0451 15.3766L9.29389 12.6512C9.11865 12.5239 8.88135 12.5239 8.70611 12.6512L4.95488 15.3766C4.56303 15.6613 4.03578 15.2783 4.18546 14.8176L5.6183 10.4078C5.68524 10.2018 5.61191 9.9761 5.43667 9.84878L1.68544 7.12336C1.29358 6.83866 1.49497 6.21885 1.97933 6.21885H6.6161C6.83272 6.21885 7.02469 6.07937 7.09163 5.87336L8.52447 1.46353Z" fill="#2B3033"/>
+                          <path d="M28.5245 1.46353C28.6741 1.00287 29.3259 1.00287 29.4755 1.46353L30.9084 5.87336C30.9753 6.07937 31.1673 6.21885 31.3839 6.21885H36.0207C36.505 6.21885 36.7064 6.83865 36.3146 7.12336L32.5633 9.84878C32.3881 9.9761 32.3148 10.2018 32.3817 10.4078L33.8145 14.8176C33.9642 15.2783 33.437 15.6613 33.0451 15.3766L29.2939 12.6512C29.1186 12.5239 28.8814 12.5239 28.7061 12.6512L24.9549 15.3766C24.563 15.6613 24.0358 15.2783 24.1855 14.8176L25.6183 10.4078C25.6852 10.2018 25.6119 9.9761 25.4367 9.84878L21.6854 7.12336C21.2936 6.83866 21.495 6.21885 21.9793 6.21885H26.6161C26.8327 6.21885 27.0247 6.07937 27.0916 5.87336L28.5245 1.46353Z" fill="#2B3033"/>
+                          <path d="M48.5245 1.46353C48.6741 1.00287 49.3259 1.00287 49.4755 1.46353L50.9084 5.87336C50.9753 6.07937 51.1673 6.21885 51.3839 6.21885H56.0207C56.505 6.21885 56.7064 6.83865 56.3146 7.12336L52.5633 9.84878C52.3881 9.9761 52.3148 10.2018 52.3817 10.4078L53.8145 14.8176C53.9642 15.2783 53.437 15.6613 53.0451 15.3766L49.2939 12.6512C49.1186 12.5239 48.8814 12.5239 48.7061 12.6512L44.9549 15.3766C44.563 15.6613 44.0358 15.2783 44.1855 14.8176L45.6183 10.4078C45.6852 10.2018 45.6119 9.9761 45.4367 9.84878L41.6854 7.12336C41.2936 6.83866 41.495 6.21885 41.9793 6.21885H46.6161C46.8327 6.21885 47.0247 6.07937 47.0916 5.87336L48.5245 1.46353Z" fill="#2B3033"/>
+                          <path d="M68.5245 1.46353C68.6741 1.00287 69.3259 1.00287 69.4755 1.46353L70.9084 5.87336C70.9753 6.07937 71.1673 6.21885 71.3839 6.21885H76.0207C76.505 6.21885 76.7064 6.83865 76.3146 7.12336L72.5633 9.84878C72.3881 9.9761 72.3148 10.2018 72.3817 10.4078L73.8145 14.8176C73.9642 15.2783 73.437 15.6613 73.0451 15.3766L69.2939 12.6512C69.1186 12.5239 68.8814 12.5239 68.7061 12.6512L64.9549 15.3766C64.563 15.6613 64.0358 15.2783 64.1855 14.8176L65.6183 10.4078C65.6852 10.2018 65.6119 9.9761 65.4367 9.84878L61.6854 7.12336C61.2936 6.83866 61.495 6.21885 61.9793 6.21885H66.6161C66.8327 6.21885 67.0247 6.07937 67.0916 5.87336L68.5245 1.46353Z" fill="#2B3033"/>
+                          <path d="M88.5245 1.46353C88.6741 1.00287 89.3259 1.00287 89.4755 1.46353L90.9084 5.87336C90.9753 6.07937 91.1673 6.21885 91.3839 6.21885H96.0207C96.505 6.21885 96.7064 6.83865 96.3146 7.12336L92.5633 9.84878C92.3881 9.9761 92.3148 10.2018 92.3817 10.4078L93.8145 14.8176C93.9642 15.2783 93.437 15.6613 93.0451 15.3766L89.2939 12.6512C89.1186 12.5239 88.8814 12.5239 88.7061 12.6512L84.9549 15.3766C84.563 15.6613 84.0358 15.2783 84.1855 14.8176L85.6183 10.4078C85.6852 10.2018 85.6119 9.9761 85.4367 9.84878L81.6854 7.12336C81.2936 6.83866 81.495 6.21885 81.9793 6.21885H86.6161C86.8327 6.21885 87.0247 6.07937 87.0916 5.87336L88.5245 1.46353Z" fill="#2B3033"/>
+                        </svg>
+                        {% if block.settings.richtext != blank %}
+                          <p class="ls-xs rictext mb-0 pb-4">{{ block.settings.richtext }}</p>
+                        {% endif %}
+                        {% if block.settings.title != blank %}
+                          <div class="h6 mb-4 mb-lg-8 d-flex" style="color: {{ section.settings.block_text_color }};">
+                            {{ block.settings.title }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="arrow d-flex">
+                  <div class="swiper-button-prev testi-button-prev icon-btn-arrow-left"></div>
+                  <div class="swiper-button-next testi-button-next icon-btn-arrow"></div>
+                </div>
+              </slider-element>
+
+              {% if section.settings.btn_txt != blank %}
+                <a
+                  {% if section.settings.btn_link %}
+                    href="{{ section.settings.btn_link }}"
+                  {% endif -%}
+                  class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}"
+                >
+                  {{- section.settings.btn_txt -}}
+                </a>
+              {% endif %}
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column me-lg-n1">
+              <div class="banner-img pe-2 pe-md-0">
+                <slider-element class="swiper-container carousel">
+                  <div
+                    class="swiper swiper-slider test-with-banner me-lg-n2"
+                    data-slider='
+                      {
+                          "grabCursor": true,
+                          "loop": false,
+                          "speed": 500,
+                          "effect": "fade",
+                          "fadeEffect": {
+                            "crossFade": "false"
+                            }
+                      }
+                    '
+                  >
+                    <div class="swiper-wrapper">
+                      {% for block in section.blocks %}
+                        {% if block.type == 'banner' %}
+                        <div class="swiper-slide d-flex">
+                          <div class="d-inline-flex flex-column banner-img ms-lg-auto">
+                          <div class="overflow-hidden link-banner d-flex">
+                            {%- if block.settings.image != blank -%}
+                              <img
+                                srcset="
+                                  {%- if block.settings.image.width >= 300 -%}{{ block.settings.image | image_url: width: 300 }} 300w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 400 -%}{{ block.settings.image | image_url: width: 350 }} 350w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 450 -%}{{ block.settings.image | image_url: width: 450 }} 450w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w{%- endif -%}
+                                "
+                                src="{{ block.settings.image | image_url: width: 50 }}"
+                                sizes="(min-width: {{ settings.container_width }}) 400px, (min-width: 992px) 39.11vw, (min-width: 768px) 36.46vw, calc(100vw - 40px)"
+                                alt="{{ block.settings.title | escape }}"
+                                loading="lazy"
+                                width="{{ block.settings.image.width }}"
+                                height="{{ block.settings.image.height }}"
+                                class="object-fit-cover"
+                              >
+                            {%- else -%}
+                              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {%- endif -%}
+                          </div>
+                          {% if block.settings.btn_txt_title != blank %}
+                            <a
+                              {% if block.settings.btn_txt_link %}
+                                href="{{ block.settings.btn_txt_link }}"
+                              {% endif -%}
+                              class="btn btn-link d-inline-flex justify-content-start mt-3"
+                            >
+                              <span class="add-text">{{- block.settings.btn_txt_title -}}</span>
+                            </a>
+                          {% endif %}
+                        </div>
+                        </div>
+                      {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                </slider-element>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+{% schema %}
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Block Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "secondary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "block_bg_color",
+      "label": "Background Color",
+      "default": "#F2F2F2"
+    },
+    {
+      "type": "color",
+      "id": "block_text_color",
+      "label": "Text Color",
+      "default": "#2B3033"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Add Block",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "richtext",
+          "label": "Discription"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "banner",
+      "name": "Add Collection/Product",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Collection/Product Image",
+          "info": "For Better Viewing Use Example dimentions: 420*520 ( Aspect Ratio: 1.05 )"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt_title",
+          "label": "Collection/Product Title"
+        },
+        {
+          "type": "url",
+          "id": "btn_txt_link",
+          "label": "Collection/Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

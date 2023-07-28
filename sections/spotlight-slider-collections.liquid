@@ -1,0 +1,238 @@
+{% if section.settings.enabled %}
+  <link rel="stylesheet" href="{{ 'spot-collection-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+  <section
+    class="section-content collection-with-slider mb-6 mb-lg-0"
+    data-section-id="{{ section.id }}"
+    style="background:{{ section.settings.section_bg_color }};"
+  >
+    <div class="container">
+      <div class="text-center">
+        {% if section.settings.heading_txt != blank %}
+          <h2 class="h6">{{ section.settings.heading_txt }}</h2>
+        {% endif %}
+      </div>
+    </div>
+    {% if section.blocks.size > 1 %}
+      <slider-element class="swiper-container carousel">
+        <div
+          class="swiper swiper-slider spot-slider-list pb-8 pb-lg-0"
+          data-slider='
+            {
+                "loop": true,
+                "slidesPerView": 1.11,
+                "centeredSlides": true,
+                "grabCursor": true,
+                "speed": 500,
+                "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                },
+                "breakpoints": {
+                  "992": {
+                      "slidesPerView": 1.735
+                  }
+              }
+            }
+          '
+        >
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide spotlight-grids d-flex flex-column">
+                <div class="spot-card text-center my-auto">
+                  <div class="banner-img">
+                    {% if block.settings.spot_title != blank %}
+                      <div class="h1 spot-title position-relative">{{ block.settings.spot_title }}</div>
+                    {% endif %}
+                    {%- if block.settings.image != blank -%}
+                      <img
+                        srcset="
+                          {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                          {%- if block.settings.image.width >= 400 -%}{{ block.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+                          {%- if block.settings.image.width >= 450 -%}{{ block.settings.image | image_url: width: 450 }} 450w,{%- endif -%}
+                          {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                          {%- if block.settings.image.width >= 650 -%}{{ block.settings.image | image_url: width: 650 }} 650w,{%- endif -%}
+                          {%- if block.settings.image.width >= 780 -%}{{ block.settings.image | image_url: width: 780 }} 780w,{%- endif -%}
+                          {%- if block.settings.image.width >= 900 -%}{{ block.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+                          {%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                          {%- if block.settings.image.width >= 1200 -%}{{ block.settings.image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                          {%- if block.settings.image.width >= 1400 -%}{{ block.settings.image | image_url: width: 1400 }} 1400w,{%- endif -%}
+                          {%- if block.settings.image.width >= 1600 -%}{{ block.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
+                          {%- if block.settings.image.width >= 1800 -%}{{ block.settings.image | image_url: width: 1800 }} 1800w{%- endif -%}
+                        "
+                        src="{{ block.settings.image | image_url: width: 50 }}"
+                        sizes="(min-width: 992px) 57.64vw, calc(100vw - 40px)"
+                        alt="{{ block.settings.spot_title | escape }}"
+                        class="w-100"
+                        loading="lazy"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                      >
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+                  <div class="second-img position-relative mx-auto">
+                    {%- if block.settings.second_image != blank -%}
+                      <img
+                        srcset="
+                          {%- if block.settings.second_image.width >= 360 -%}{{ block.settings.second_image | image_url: width: 360 }} 360w,{%- endif -%}
+                          {%- if block.settings.second_image.width >= 520 -%}{{ block.settings.second_image | image_url: width: 520 }} 520w,{%- endif -%}
+                          {%- if block.settings.second_image.width >= 650 -%}{{ block.settings.second_image | image_url: width: 650 }} 650w,{%- endif -%}
+                          {%- if block.settings.second_image.width >= 750 -%}{{ block.settings.second_image | image_url: width: 780 }} 780w,{%- endif -%}
+                          {%- if block.settings.second_image.width >= 850 -%}{{ block.settings.second_image | image_url: width: 900 }} 900w,{%- endif -%}
+                          {%- if block.settings.second_image.width >= 1000 -%}{{ block.settings.second_image | image_url: width: 1000 }} 1000w{%- endif -%}
+                        "
+                        src="{{ block.settings.second_image | image_url: width: 50 }}"
+                        sizes="(min-width: 992px) 377px, 172px"
+                        alt="{{ block.settings.spot_title | escape }}"
+                        class="w-100"
+                        loading="lazy"
+                        width="{{ block.settings.second_image.width }}"
+                        height="{{ block.settings.second_image.height }}"
+                      >
+                    {%- endif -%}
+                  </div>
+                  {% if block.settings.coll_txt != blank %}
+                    <div class="d-flex justify-content-center">
+                      <a
+                        {% if block.settings.coll_link %}
+                          href="{{ block.settings.coll_link }}"
+                        {% endif -%}
+                        class="pt-1 mt-2 pb-2 py-lg-0 mb-2 mb-lg-3 d-inline-flex spot-coll-title"
+                      >
+                        {{- block.settings.coll_txt -}}
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination d-block d-lg-none bottom-0"></div>
+        </div>
+      </slider-element>
+    {% endif %}
+
+    {% if section.settings.btn_txt != blank %}
+      <div class="text-center d-flex justify-content-center pb-1 pb-lg-0 mt-n9 mt-lg-n1 explore-link position-relative">
+        <a
+          {% if section.settings.btn_link %}
+            href="{{ section.settings.btn_link }}"
+          {% endif -%}
+          class="btn btn-link"
+        >
+          <span class="add-text">{{- section.settings.btn_txt -}}</span>
+        </a>
+      </div>
+    {% endif %}
+  </section>
+{% endif %}
+{% schema %}
+{
+  "name": "Spotlight Collection",
+  "class": "spotlight-with-slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading_txt",
+      "label": "Section Title",
+      "default": "In The Spotlight"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "spotslider",
+      "name": "Collection Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Title"
+        },
+        {
+          "type": "text",
+          "id": "spot_title",
+          "label": "Section Title"
+        },
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image",
+          "info": "For Better Viewing Use Example dimentions: 1245*563 ( Aspect Ratio: 1.5 )"
+        },
+        {
+          "type": "header",
+          "content": "Second Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "second_image",
+          "label": "Select Image",
+          "info": "For Better Viewing Use Example dimentions: 566*432 ( Aspect Ratio: 1.5 )"
+        },
+        {
+          "type": "header",
+          "content": "Collection Title"
+        },
+        {
+          "type": "text",
+          "id": "coll_txt",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "coll_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spotlight Collection",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

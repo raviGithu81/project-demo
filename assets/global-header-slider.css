@@ -5,7 +5,7 @@
 
 .header-slider .tallheight .swiper-slide{
     height: 60vh;
-    min-height: 600px;
+    min-height: 735px;
 }
 
 .header-slider .fullheight .swiper-slide{
@@ -74,9 +74,34 @@
     left: 0;
 }
 
+.header-video-slide .full-video-caption .inside-block:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    height: 150vh;
+    width: 0.5px;
+    background: #fff;
+    top: 13px;
+}
+
 .video-with--text:not(.show--video) .video-section{
     display: none;
 }
 .video-with--text.placement--grid.show--video .content-section{
     display: none;
+}
+
+.header-video-slider{
+    margin-top: -60px;
+    position: relative;
+}
+
+@media only screen and (min-width: 992px){
+    .header-video-slider{
+        margin-top: -80px;
+    }
+    .header-video-slide .full-video-caption .inside-block:after{
+        top: -3px;
+        left: 15px;
+    }
 }

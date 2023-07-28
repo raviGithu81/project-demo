@@ -1,0 +1,196 @@
+{% if section.settings.enabled != blank %}
+  {{ 'random-img-with-text.css' | asset_url | stylesheet_tag }}
+  <section
+    class="section-content pb-0 pt-lg-12 random-section"
+    data-section-id="{{ section.id }}"
+    style="background-color: {{ section.settings.block_bg_color }}; color: {{ section.settings.block_text_color }};"
+  >
+    <div class="container pt-lg-1">
+      <div class="row random-block">
+        {% for block in section.blocks limit: 2 %}
+          <div class="col-12 d-flex flex-column {% cycle 'col-lg-7 block-one', 'col-lg-5 block-two ps-lg-9' %}">
+            <div class="random-content">
+              {% if block.settings.title != blank %}
+                <h2 class="spot-title mb-2 pb-lg-3 mb-lg-n1 mt-lg-n3" style="color: {{ section.settings.block_text_color }};">
+                  {{ block.settings.title }}
+                </h2>
+              {% endif %}
+              {% if block.settings.richtext != blank %}
+                <p class="pb-3 pb-lg-4 mb-lg-1">{{ block.settings.richtext }}</p>
+              {% endif %}
+              {% if block.settings.btn_txt != blank %}
+                <a
+                  {% if block.settings.btn_link %}
+                    href="{{ block.settings.btn_link }}"
+                  {% endif -%}
+                  class="btn mb-6 mb-lg-5 mb-lg-11 btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}"
+                >
+                  {{- block.settings.btn_txt -}}
+                </a>
+              {% endif %}
+            </div>
+            <div class="banner-img mb-6 mb-lg-5 mb-lg-11">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    srcset="
+                      {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 350 }} 350w,{%- endif -%}
+                      {%- if block.settings.image.width >= 400 -%}{{ block.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+                      {%- if block.settings.image.width >= 500 -%}{{ block.settings.image | image_url: width: 500 }} 500w,{%- endif -%}
+                      {%- if block.settings.image.width >= 600 -%}{{ block.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
+                      {%- if block.settings.image.width >= 700 -%}{{ block.settings.image | image_url: width: 700 }} 700w,{%- endif -%}
+                      {%- if block.settings.image.width >= 800 -%}{{ block.settings.image | image_url: width: 800 }} 800w,{%- endif -%}
+                      {%- if block.settings.image.width >= 900 -%}{{ block.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w{%- endif -%}
+                    "
+                    src="{{ block.settings.image | image_url: width: 50 }}"
+                    sizes="{% cycle '(min-width:1290px) 721px', '(min-width:1290px) 455px' %}, {% cycle '(min-width: 992px) 59vw', '(min-width: 992px) 31.59vw' %}, calc(100vw - 40px)"
+                    alt="{{ block.settings.title | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+{% schema %}
+{
+  "name": "Random Image With Text",
+  "class": "spotlight-with-slider",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "block_bg_color",
+      "label": "Background Color",
+      "default": "#2B3033"
+    },
+    {
+      "type": "color",
+      "id": "block_text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "randomblockr",
+      "name": "Add Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image",
+          "info": "For Better Viewing Use Example dimentions: 756*945 ( Aspect Ratio: 1.05 )"
+        },
+        {
+          "type": "header",
+          "content": "Block Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "richtext",
+          "label": "Discription"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            }
+          ],
+          "default": "secondary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Random Image With Text",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

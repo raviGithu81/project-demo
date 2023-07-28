@@ -1,0 +1,30 @@
+.image-with-text .container{
+    max-width: 1070px;
+}
+.image-with-text .setp-heading {
+    font-size: 60px;
+    letter-spacing: -2px;
+    line-height: 1;
+    -webkit-text-stroke: 1px var(--bs-color-blue);
+    color: transparent;
+    z-index: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: relative;
+}
+@media (min-width: 992px){
+.image-with-text .setp-heading {
+    position: absolute;
+    font-size: 100px;
+    line-height: 1.2;
+    left: 50%;
+    top: 40px;
+    right: auto;
+}
+.image-with-text .inside-block h2{
+    line-height: 1.25;
+}
+}

@@ -1,0 +1,9 @@
+.insta-img img{
+    height: 243px;
+    object-fit: cover;
+}
+@media (min-width: 992px){
+    .insta-img img{
+        height: 300px;
+    }
+}

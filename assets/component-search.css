@@ -13,7 +13,7 @@
     padding: 0rem;
     height: 2.5rem;
     width: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-left: 2rem; 
     background-color: transparent;
     outline: none;
@@ -58,6 +58,16 @@
     width: 100%;
     height: 100%;
   }
+
+  .search-modal__content .form-control{
+    padding-left: 40px;
+  }
+
+  @media (min-width: 992px) {
+    .search-modal__content .form-control{
+      padding-left: 70px;
+    }
+  }
   
   .search-modal__form {
     width: 100%;
@@ -91,11 +101,17 @@
     height: 100%;
     justify-content: center;
     overflow: hidden;
-    padding: 10px 20px;
+    padding: 0;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
-    font-size: 26px;
+    font-size: 22px;
+  }
+
+  @media (min-width: 992px) {
+    .field__button {
+      font-size: 24px;
+    }
   }
   
   /*======== Predictive Search =========*/

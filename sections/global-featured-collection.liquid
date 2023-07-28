@@ -5,17 +5,24 @@
 {% assign collection_grid_type = section.settings.collection_grid_type %}
 {% assign productExcludeTag = settings.product_exclude_tag_text %}
 
-<section class="section-content" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
-    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
+<section class="section-content mb-lg-1" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+    <div class="container" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
         <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 text-center mb-md-5 mb-4 mx-auto">
+            <div class="col-12 mb-3 mb-md-3 pb-1 d-flex justify-content-between">
                 {% if section.settings.heading_txt != blank %}
-                    <h3 class="section-title mb-3">{{ section.settings.heading_txt | escape }}</h3>
+                    <h2 class="section-title m-0 h6">{{ section.settings.heading_txt | escape }}</h2>
                 {% endif %}
-                {% if section.settings.lead_txt != blank %}
-                    <p>
-                        {{ section.settings.lead_txt }}
-                    </p>
+                {% if section.settings.btn_txt != blank %}
+                  <a
+                    {% if section.settings.btn_link %}
+                      href="{{ section.settings.btn_link }}"
+                    {% endif -%}
+                    class="fw-semibold btn btn-link"
+                  >
+                    <span class="add-text">
+                    {{- section.settings.btn_txt -}}
+                    </span>
+                  </a>
                 {% endif %}
             </div>
         </div>
@@ -43,8 +50,7 @@
             <slider-element class="swiper-container carousel d-block position-relative arrow-outside">
                 <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
                       "loop": false,
-                      "shortSwipes": false,
-                      "slidesPerView": "1",
+                      "slidesPerView": "2",
                       "spaceBetween": 15,
                       "grabCursor": true,
                       "navigation": {
@@ -52,13 +58,10 @@
                           "prevEl": ".product-button-prev"
                       },
                       "pagination": {
-                          "el": ".swiper-pagination"
+                          "el": ".swiper-pagination",
+                          "clickable": true
                       },
                       "breakpoints": {
-                        "560": {
-                          "slidesPerView": 2,
-                          "spaceBetween": 20
-                        },
                         "768": {
                           "slidesPerView": 3,
                           "spaceBetween": 30
@@ -78,9 +81,10 @@
                           {% endunless %}
                         {% endfor %}
                     </div>
+                  <div class="swiper-pagination d-block d-lg-none bottom-0 position-static mt-3 pt-1"></div>
                 </div>
-                <div class="swiper-button-next product-button-next icon-next"></div>
-                <div class="swiper-button-prev product-button-prev icon-previous"></div>
+                <div class="swiper-button-next product-button-next icon-btn-arrow"></div>
+                <div class="swiper-button-prev product-button-prev icon-btn-arrow-left"></div>
             </slider-element>
         {% endif %}
       {% endif %}
@@ -92,18 +96,11 @@
 {% schema %}
   {
     "name": "Featured Collection",
-    "tag": "section",
     "class": "index-featured-collectiion",
     "settings": [
       {
         "type": "header",
         "content": "Layout"
-      },
-      {
-        "type": "checkbox",
-        "id": "fluid_layout",
-        "label": "Full Width Layout?",
-        "default": false
       },
       {
         "type": "select",
@@ -129,12 +126,17 @@
         "type": "textarea",
         "id": "heading_txt",
         "label": "Heading Text",
-        "default": "Featured Collection"
+        "default": "the best sellers"
       },
       {
-        "type": "textarea",
-        "id": "lead_txt",
-        "label": "Lead Text"
+        "type": "text",
+        "id": "btn_txt",
+        "label": "Link Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
       },
       {
         "type": "header",
@@ -153,13 +155,13 @@
         "type": "color",
         "id": "section_bg_color",
         "label": "Background Color",
-        "default": "#FAFAF7"
+        "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "section_txt_color",
         "label": "Text Color",
-        "default": "#222222"
+        "default": "#2B3033"
       }
     ],
     "presets": [{

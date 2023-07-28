@@ -3,587 +3,543 @@
     "16270344513581fee7": {
       "type": "global-header-slider",
       "blocks": {
-        "e5811002-6f6b-488d-a9a4-803d62a8f03e": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/mlouye-sera-tote-macaron-desk1.jpg",
-            "image_mobile": "shopify://shop_images/multi-colored-twists-of-yarn.jpg",
-            "slide_bg_color": "#ffffff",
-            "enable_overlay": false,
-            "overlay_bg_color": "#000000",
-            "overlay_opacity": 0.1,
-            "caption_alignment": "justify-content-center",
-            "alignment": "text-center",
-            "heading": "Awesome Hero Slider",
-            "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-            "heading_txt_color": "#ffffff",
-            "caption_txt_color": "#ffffff",
-            "btn_txt": "Shop Now",
-            "btn_link": "#",
-            "btn_type": "",
-            "btn_variant": "white",
-            "btn_size": ""
-          }
-        },
-        "5f138ef3-db88-4ec2-9c76-525b0af787bf": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/mlouye-thelma-louise-homepage-1.jpg",
-            "image_mobile": "shopify://shop_images/mlouye-thelma-louise-homepage-2.jpg",
-            "slide_bg_color": "#ffffff",
-            "enable_overlay": true,
-            "overlay_bg_color": "#ffffff",
-            "overlay_opacity": 0.1,
-            "caption_alignment": "justify-content-center",
-            "alignment": "text-center",
-            "heading": "Awesome Hero Slider",
-            "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            "heading_txt_color": "",
-            "caption_txt_color": "",
-            "btn_txt": "Shop Now",
-            "btn_link": "#",
-            "btn_type": "",
-            "btn_variant": "dark",
-            "btn_size": ""
-          }
-        },
-        "21b79b13-165a-4ae3-9277-e3091171e49d": {
+        "35ce7281-b7d1-4b69-a030-2a78d688cb05": {
           "type": "video-slide",
           "settings": {
-            "muted": true,
-            "controls": true,
-            "loop": false,
-            "title": "Awesome Heading",
-            "subtitle": "<p>Lipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.</p>",
-            "play_icon": false,
-            "play_btn": true,
-            "btn_txt": "",
-            "btn_link": "",
+            "title": "capture spectacular moments",
+            "subtitle": "<p>Explore the skies with our top-of-the-line drone collection, perfect for beginners and pros alike<\/p>",
+            "btn_txt": "shop now",
+            "btn_link": "shopify:\/\/collections",
             "btn_type": "",
-            "btn_variant": "dark",
+            "btn_variant": "primary",
             "btn_size": "",
-            "poster_type": "",
-            "bg_video": "https://cdn.shopify.com/videos/c/o/v/aa72308259d0435488922d55c49c5398.mp4",
-            "mobile_bg_video": "",
-            "image": "shopify://shop_images/video_cover.jpg",
-            "image_mobile": "shopify://shop_images/video_cover.jpg",
+            "poster_type": "video",
+            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c2c11387a99d43e3b0ed8913c82e3e4d.mp4",
+            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c2c11387a99d43e3b0ed8913c82e3e4d.mp4",
+            "image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
             "video_type": "local",
             "placement": "grid",
-            "video_id": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Seedsheet_-_Four_Steps_to_Fresh_Food.mp4?v=1629442501",
-            "mobile_video_id": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Seedsheet_-_Four_Steps_to_Fresh_Food.mp4?v=1629442501",
-            "section_bg_color": "#fafaf7",
-            "section_text_color": "#000000",
+            "video_id": "",
+            "mobile_video_id": "",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
+            "alignment": "text-start",
+            "video_alignment": "justify-content-start"
+          }
+        },
+        "f0cf35a5-a6af-4921-8468-937060ecf5b1": {
+          "type": "video-slide",
+          "settings": {
+            "title": "capture spectacular moments",
+            "subtitle": "<p>Explore the skies with our top-of-the-line drone collection, perfect for beginners and pros alike<\/p>",
+            "btn_txt": "shop now",
+            "btn_link": "shopify:\/\/collections",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "poster_type": "video",
+            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c2c11387a99d43e3b0ed8913c82e3e4d.mp4",
+            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c2c11387a99d43e3b0ed8913c82e3e4d.mp4",
+            "image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+            "video_type": "local",
+            "placement": "grid",
+            "video_id": "",
+            "mobile_video_id": "",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
             "alignment": "text-start",
             "video_alignment": "justify-content-start"
           }
         }
       },
       "block_order": [
-        "e5811002-6f6b-488d-a9a4-803d62a8f03e",
-        "5f138ef3-db88-4ec2-9c76-525b0af787bf",
-        "21b79b13-165a-4ae3-9277-e3091171e49d"
+        "35ce7281-b7d1-4b69-a030-2a78d688cb05",
+        "f0cf35a5-a6af-4921-8468-937060ecf5b1"
       ],
       "settings": {
         "enabled": true,
-        "nav_arrows": true,
+        "nav_arrows": false,
         "nav_dots": true,
         "height": "tallheight"
       }
     },
-    "2b865f5c-7e70-4f62-8620-e3471df1555f": {
-      "type": "global-auto-slider",
+    "0712a294-dd56-4b3b-b5f6-5fb29250621c": {
+      "type": "spotlight-slider-collections",
       "blocks": {
-        "466af5de-e9d3-4c53-a471-764098e65fdd": {
-          "type": "content",
+        "ac6772b0-3de5-4ed6-9ca1-2422a1b82f05": {
+          "type": "spotslider",
           "settings": {
-            "content": "Free Standard Shipping on Orders of $75+"
+            "spot_title": "dji avata",
+            "image": "shopify:\/\/shop_images\/Rectangle_43_2.jpg",
+            "second_image": "shopify:\/\/shop_images\/drone_1.png",
+            "coll_txt": "DJI AVATA. BORN TO FLY.",
+            "coll_link": "shopify:\/\/products\/fadeaway-pant"
           }
         },
-        "79a2355f-7c6d-4578-b5b6-e2322aedb30d": {
-          "type": "content",
+        "38516166-71c6-4ba2-9e59-7181ba16c18f": {
+          "type": "spotslider",
           "settings": {
-            "content": "30 days money back guarantee"
+            "spot_title": "dji mavic 3",
+            "image": "shopify:\/\/shop_images\/Rectangle_43_2.jpg",
+            "second_image": "shopify:\/\/shop_images\/drone_1.png",
+            "coll_txt": "DJI MAVIC 3 SERIES. IMAGING ABOVE EVERYTHING.",
+            "coll_link": "shopify:\/\/products\/v-neck-bralette"
           }
         },
-        "aad1ff5e-9173-4a68-9665-c8664d6457a7": {
-          "type": "content",
+        "81745687-3513-4710-817a-f410795ad903": {
+          "type": "spotslider",
           "settings": {
-            "content": "Free Shipping on all Orders $100"
+            "spot_title": "dji mini 3 pro",
+            "image": "shopify:\/\/shop_images\/Rectangle_43_2.jpg",
+            "second_image": "shopify:\/\/shop_images\/drone_1.png",
+            "coll_txt": "DJI MINI 3 PRO. FLY MINI, CREATE BIG.",
+            "coll_link": "shopify:\/\/products\/fadeaway-pant"
           }
         },
-        "1eb4d067-27d9-449a-9698-ef234bc223f4": {
-          "type": "content",
+        "42581e15-ff16-4c7e-aaee-c67dfe0ba382": {
+          "type": "spotslider",
           "settings": {
-            "content": "Spooky stickers have arrived!"
+            "spot_title": "dji mini 3 pro",
+            "image": "shopify:\/\/shop_images\/Rectangle_43_2.jpg",
+            "second_image": "shopify:\/\/shop_images\/drone_1.png",
+            "coll_txt": "DJI MINI 3 PRO. FLY MINI, CREATE BIG.",
+            "coll_link": "shopify:\/\/products\/fadeaway-pant"
           }
         }
       },
       "block_order": [
-        "466af5de-e9d3-4c53-a471-764098e65fdd",
-        "79a2355f-7c6d-4578-b5b6-e2322aedb30d",
-        "aad1ff5e-9173-4a68-9665-c8664d6457a7",
-        "1eb4d067-27d9-449a-9698-ef234bc223f4"
+        "ac6772b0-3de5-4ed6-9ca1-2422a1b82f05",
+        "38516166-71c6-4ba2-9e59-7181ba16c18f",
+        "81745687-3513-4710-817a-f410795ad903",
+        "42581e15-ff16-4c7e-aaee-c67dfe0ba382"
       ],
       "settings": {
-        "fluid_layout": false,
-        "section_bg_color": "#fdeff1",
-        "section_txt_color": "#000000",
-        "scroll_time": "200s"
+        "heading_txt": "In The Spotlight",
+        "btn_txt": "explore  collection",
+        "btn_link": "shopify:\/\/collections",
+        "section_bg_color": "#ffffff"
       }
     },
-    "16270420142c0cafe8": {
-      "type": "global-features-grid",
+    "92e201b1-013b-46d1-9e65-69c88cd9fe7e": {
+      "type": "half-img-with-text",
       "blocks": {
-        "16270420142c0cafe8-0": {
-          "type": "content",
+        "2f82bb9e-cab0-4341-8e6d-d3b8f2c6d050": {
+          "type": "spotslider",
           "settings": {
-            "icon_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/naturally_preserved.svg?v=1632919288",
-            "title": "naturally preserved",
-            "txt": ""
+            "image": "shopify:\/\/shop_images\/Untitled-1_c829feed-c3ab-4f29-8f9c-1faccbfc4073.png",
+            "image_mobile": "shopify:\/\/shop_images\/mobile-1.png",
+            "title": "we are true drone nerds",
+            "richtext": "Our experts are specifically trained on the latest drone technology to be able to assist you on the best solution for your needs.",
+            "btn_txt": "meet drone nerds",
+            "btn_link": "shopify:\/\/products\/fadeaway-pant",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "block_bg_color": "linear-gradient(137deg, rgba(227, 239, 245, 1) 1.08%, rgba(225, 225, 225, 1) 54.69%, rgba(201, 201, 201, 1) 98.96%)",
+            "block_text_color": "#2b3033"
           }
         },
-        "beea9bb0-d601-4956-83a1-f2d38787618b": {
-          "type": "content",
+        "651e211a-bfd4-4ab3-aaf5-4b1d42229f44": {
+          "type": "spotslider",
           "settings": {
-            "icon_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/organics_based.svg?v=1632919287",
-            "title": "organics based",
-            "txt": ""
-          }
-        },
-        "798431da-59c8-4c8e-92d3-73e2aac83e38": {
-          "type": "content",
-          "settings": {
-            "icon_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/vegan.svg?v=1632919287",
-            "title": "vegan",
-            "txt": ""
-          }
-        },
-        "a9a29ecb-1e86-4c8a-be5e-8a146e4e9a49": {
-          "type": "content",
-          "settings": {
-            "icon_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/peta_cruelty_free.svg?v=1632919287",
-            "title": "peta cruelty free",
-            "txt": ""
-          }
-        },
-        "81136cdc-7195-4ea6-abe7-31f4df772124": {
-          "type": "content",
-          "settings": {
-            "icon_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/clean_pure.svg?v=1632919287",
-            "title": "clean & pure",
-            "txt": ""
-          }
-        },
-        "cf990352-fa89-462e-9b30-ba28b8d1bead": {
-          "type": "content",
-          "settings": {
-            "icon_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/trust_love.svg?v=1632919287",
-            "title": "trust & love",
-            "txt": ""
+            "image": "shopify:\/\/shop_images\/Untitled-2.png",
+            "image_mobile": "shopify:\/\/shop_images\/mobile-2.png",
+            "title": "save big with DJI certified refurbished",
+            "richtext": "We are one of the only DJI-authorized service centers in the United States and employ a group of experts technicians that can get you up and running quickly with genuine parts.",
+            "btn_txt": "shop dji refurbished",
+            "btn_link": "shopify:\/\/products\/fadeaway-pant",
+            "btn_type": "",
+            "btn_variant": "secondary",
+            "btn_size": "",
+            "block_bg_color": "linear-gradient(33deg, rgba(10, 10, 10, 1) 1.08%, rgba(74, 80, 83, 1) 100%)",
+            "block_text_color": "#ffffff"
           }
         }
       },
       "block_order": [
-        "16270420142c0cafe8-0",
-        "beea9bb0-d601-4956-83a1-f2d38787618b",
-        "798431da-59c8-4c8e-92d3-73e2aac83e38",
-        "a9a29ecb-1e86-4c8a-be5e-8a146e4e9a49",
-        "81136cdc-7195-4ea6-abe7-31f4df772124",
-        "cf990352-fa89-462e-9b30-ba28b8d1bead"
+        "2f82bb9e-cab0-4341-8e6d-d3b8f2c6d050",
+        "651e211a-bfd4-4ab3-aaf5-4b1d42229f44"
       ],
       "settings": {
-        "fluid_layout": false,
-        "grid_size": "2",
-        "heading_txt": "Where nature meets science.",
-        "lead_txt": "We use cutting-edge technologies in natural ingredient formulations to offer skin-healthy makeup and skincare that’s results-driven yet gentle and kind to our earth.",
-        "btn_txt": "Learn More",
-        "btn_url": "#",
-        "section_bg_color": "#ffffff",
-        "section_txt_color": "#222222",
-        "btn_type": "",
-        "btn_variant": "primary",
-        "btn_size": ""
-      }
-    },
-    "162710985888a5f3c0": {
-      "type": "global-image-banner",
-      "blocks": {
-        "162710985888a5f3c0-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Nature inspired colors. Science powered formulas."
-          }
-        },
-        "162710985888a5f3c0-1": {
-          "type": "text",
-          "settings": {
-            "text": "Our products are formulated with state-of-the-art, naturally-derived ingredients that are healthy for your skin and conscientious of our planet."
-          }
-        },
-        "be1a2f63-a362-420c-be09-0e620e2de86a": {
-          "type": "countdown",
-          "settings": {
-            "countdown_enable": true,
-            "countdown_pretext": "Time Running Out",
-            "countdown_text": "March 20, 2022 23:59",
-            "countdown_bg_color": "#9b6a45",
-            "countdown_text_color": "#ffffff"
-          }
-        },
-        "162710985888a5f3c0-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "shop our products",
-            "button_link_1": "#",
-            "btn_type_1": "",
-            "btn_variant_1": "white",
-            "btn_size_1": "",
-            "button_label_2": "",
-            "button_link_2": "#",
-            "btn_type_2": "",
-            "btn_variant_2": "dark",
-            "btn_size_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "162710985888a5f3c0-0",
-        "162710985888a5f3c0-1",
-        "be1a2f63-a362-420c-be09-0e620e2de86a",
-        "162710985888a5f3c0-2"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/mlouye-puff-desktop-1.jpg",
-        "image_mobile": "shopify://shop_images/mlouye-puff-mobile-1.jpg",
-        "txt_color": "#ffffff",
-        "enable_overlay": true,
-        "overlay_bg_color": "#000000",
-        "overlay_opacity": 0.1,
-        "height": "tallheight",
-        "desktop_text_box_position": "center",
-        "text_caption_align": "justify-content-start",
-        "text_align": "text-left",
-        "section_padding": false
-      }
-    },
-    "16273012625e8a6f4e": {
-      "type": "global-collection-list",
-      "blocks": {
-        "16273012625e8a6f4e-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "women",
-            "show_view_all": "Shop Now",
-            "section_txt_color": "#000000"
-          }
-        },
-        "16273012625e8a6f4e-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men",
-            "show_view_all": "Shop Now",
-            "section_txt_color": "#000000"
-          }
-        },
-        "75b8530c-55ba-421c-8e38-0f2ed94ded2e": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "t-shirt",
-            "show_view_all": "Shop Now",
-            "section_txt_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "16273012625e8a6f4e-0",
-        "16273012625e8a6f4e-1",
-        "75b8530c-55ba-421c-8e38-0f2ed94ded2e"
-      ],
-      "settings": {
-        "title": "Collections",
-        "txt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.",
-        "section_bg_color": "#fafaf7",
-        "section_txt_color": "#222222",
-        "grid_size": "4",
-        "image_ratio": "adapt",
-        "enable_overlay": false,
-        "overlay_bg_color": "#000000",
-        "overlay_opacity": 0.5
+        "enabled": true
       }
     },
     "162703446299aaa8de": {
       "type": "global-featured-collection",
       "settings": {
-        "fluid_layout": false,
         "collection_grid_type": "grid",
-        "heading_txt": "Featured Collection",
-        "lead_txt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.",
-        "home_featured_collection": "t-shirt",
+        "heading_txt": "the best sellers",
+        "btn_txt": "view all",
+        "btn_link": "shopify:\/\/collections\/trading-collections",
+        "home_featured_collection": "trading-collections",
         "section_bg_color": "#ffffff",
-        "section_txt_color": "#222222"
+        "section_txt_color": "#2b3033"
       }
     },
-    "16271097114d5db4ef": {
-      "type": "global-logo-list",
+    "6c30b3cc-df0d-4463-ac8e-8fcf0c012f22": {
+      "type": "random-img-with-text",
       "blocks": {
-        "3985dafd-8fbe-495c-a78d-17788cc28cb2": {
-          "type": "content",
+        "ba87ae03-2be9-42ad-9417-9b840a9c9d51": {
+          "type": "randomblockr",
           "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Byrdie_Logo.svg?v=1633088478",
-            "logo_url": ""
+            "image": "shopify:\/\/shop_images\/Rectangle_51.jpg",
+            "title": "COMPREHENSIVE ENTERPRISE DRONE SOLUTIONS",
+            "richtext": "We are  a team of drone experts dedicated to developing and supporting comprehensive UAV solutions and fleets for organizations across a multitude of industry verticals. Established in 2014, we helped hundreds of enterprises find and implement the best UAV solution for their unique operational needs.",
+            "btn_txt": "talk to an expert",
+            "btn_link": "shopify:\/\/pages\/contact",
+            "btn_type": "",
+            "btn_variant": "secondary",
+            "btn_size": ""
           }
         },
-        "2c2f7a1a-e97d-4315-a0d6-2b357320264d": {
-          "type": "content",
+        "3223875d-9ae2-433d-9eb9-593bd1210a0d": {
+          "type": "randomblockr",
           "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Glamour_Logo.svg?v=1633088478",
-            "logo_url": ""
-          }
-        },
-        "5c384d1d-15bc-4d8a-b411-54440fe6475c": {
-          "type": "content",
-          "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/New_Beauty_Logo.svg?v=1633088478",
-            "logo_url": ""
-          }
-        },
-        "1cf12a9a-a950-4b88-94d8-d4b64a084978": {
-          "type": "content",
-          "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/YahooLifestyle_Logo.svg?v=1633088478",
-            "logo_url": ""
-          }
-        },
-        "18b7a918-9ecf-47e3-8da7-6d93a7a330e6": {
-          "type": "content",
-          "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Hynt_Logo.svg?v=1633088478",
-            "logo_url": ""
-          }
-        },
-        "2dc4650f-8c4f-439c-adf1-6e23854d3945": {
-          "type": "content",
-          "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Byrdie_Logo.svg?v=1633088478",
-            "logo_url": ""
-          }
-        },
-        "65899402-a15a-469b-b33b-68f8b34d239b": {
-          "type": "content",
-          "settings": {
-            "logo_img": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/New_Beauty_Logo.svg?v=1633088478",
-            "logo_url": ""
+            "image": "shopify:\/\/shop_images\/Rectangle_52.jpg",
+            "title": "",
+            "richtext": "Our team of drone experts dedicated to developing and supporting enterprise drone programs for organizations across a multitude of industry verticals.<br><br>\nFor more information, visit our Enterprise website and learn why Drone Nerds will elevate your operations.",
+            "btn_txt": "visit drone nerds enterprise",
+            "btn_link": "shopify:\/\/pages\/contact",
+            "btn_type": "",
+            "btn_variant": "secondary",
+            "btn_size": ""
           }
         }
       },
       "block_order": [
-        "3985dafd-8fbe-495c-a78d-17788cc28cb2",
-        "2c2f7a1a-e97d-4315-a0d6-2b357320264d",
-        "5c384d1d-15bc-4d8a-b411-54440fe6475c",
-        "1cf12a9a-a950-4b88-94d8-d4b64a084978",
-        "18b7a918-9ecf-47e3-8da7-6d93a7a330e6",
-        "2dc4650f-8c4f-439c-adf1-6e23854d3945",
-        "65899402-a15a-469b-b33b-68f8b34d239b"
+        "ba87ae03-2be9-42ad-9417-9b840a9c9d51",
+        "3223875d-9ae2-433d-9eb9-593bd1210a0d"
       ],
       "settings": {
-        "fluid_layout": false,
-        "heading": "Awesome Heading",
-        "txt": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.</p>",
-        "section_bg_color": "#ffffff",
-        "section_txt_color": "#222222",
-        "nav_arrows": true,
-        "nav_dots": true
+        "enabled": true,
+        "block_bg_color": "#2b3033",
+        "block_text_color": "#ffffff"
       }
     },
-    "16270454495feb2a63": {
-      "type": "global-image-with-text",
+    "3e048a84-6696-4b7c-a06a-c2e2734a76fc": {
+      "type": "img-with-slider",
+      "blocks": {
+        "5e00a679-056b-4807-9e12-e2b11331a307": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_Hover_d1b90e1e-9e64-458c-8772-b88f0df34aa0.jpg"
+          }
+        },
+        "39f84751-77db-478f-9dc5-97950838ea49": {
+          "type": "content",
+          "settings": {
+            "block_title": "public safety",
+            "block_richtext": "Extend your vision and ensure new levels of safety.",
+            "btn_txt": "explore public safety",
+            "btn_link": "shopify:\/\/pages\/about-us",
+            "btn_type": "outline",
+            "btn_variant": "secondary",
+            "btn_size": ""
+          }
+        },
+        "cdd912c5-f3ec-4a14-a6a1-3b4f274cb057": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_54.jpg"
+          }
+        },
+        "e83789be-c1a9-4334-9b24-49898a21e354": {
+          "type": "content",
+          "settings": {
+            "block_title": "public safety 2",
+            "block_richtext": "Extend your vision and ensure new levels of safety. 2",
+            "btn_txt": "explore public safety 2",
+            "btn_link": "shopify:\/\/pages\/about-us",
+            "btn_type": "outline",
+            "btn_variant": "secondary",
+            "btn_size": ""
+          }
+        },
+        "dc26ca6b-cb3c-4dc8-b441-2eddf017a09c": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_61.jpg"
+          }
+        },
+        "10dfa34b-fd23-4da0-a224-81a2d2fa8cec": {
+          "type": "content",
+          "settings": {
+            "block_title": "public safety 3",
+            "block_richtext": "Extend your vision and ensure new levels of safety. 3",
+            "btn_txt": "explore public safety 3",
+            "btn_link": "shopify:\/\/pages\/about-us",
+            "btn_type": "outline",
+            "btn_variant": "secondary",
+            "btn_size": ""
+          }
+        },
+        "a65fbadd-cf0c-4bd4-8aac-5f76599c242e": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7.jpg"
+          }
+        },
+        "bedc34ec-ca3c-41e0-8e3f-3391800a24bc": {
+          "type": "content",
+          "settings": {
+            "block_title": "public safety 4",
+            "block_richtext": "Extend your vision and ensure new levels of safety. 4",
+            "btn_txt": "explore public safety 4",
+            "btn_link": "shopify:\/\/pages\/about-us",
+            "btn_type": "outline",
+            "btn_variant": "secondary",
+            "btn_size": ""
+          }
+        },
+        "4e905d2f-24c1-438e-800f-956f78ef856c": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13.jpg"
+          }
+        },
+        "2fb986f0-0864-4ae1-a0f3-f2d1f091f014": {
+          "type": "content",
+          "settings": {
+            "block_title": "public safety 5",
+            "block_richtext": "Extend your vision and ensure new levels of safety. 5",
+            "btn_txt": "explore public safety 5",
+            "btn_link": "shopify:\/\/pages\/about-us",
+            "btn_type": "outline",
+            "btn_variant": "secondary",
+            "btn_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "5e00a679-056b-4807-9e12-e2b11331a307",
+        "39f84751-77db-478f-9dc5-97950838ea49",
+        "cdd912c5-f3ec-4a14-a6a1-3b4f274cb057",
+        "e83789be-c1a9-4334-9b24-49898a21e354",
+        "dc26ca6b-cb3c-4dc8-b441-2eddf017a09c",
+        "10dfa34b-fd23-4da0-a224-81a2d2fa8cec",
+        "a65fbadd-cf0c-4bd4-8aac-5f76599c242e",
+        "bedc34ec-ca3c-41e0-8e3f-3391800a24bc",
+        "4e905d2f-24c1-438e-800f-956f78ef856c",
+        "2fb986f0-0864-4ae1-a0f3-f2d1f091f014"
+      ],
       "settings": {
-        "fluid_layout": false,
-        "heading_txt": "Natural beauty brand you can fully trust & love.",
-        "txt": "<p>We employ cutting-edge, clean ingredient technologies as well as certified organic ingredients that are rich in antioxidants, skin-energizing vitamins and peptides to deliver glowing results while being gentle on even the most sensitive skin types. <br/><br/>We are committed to educating you on how to best support a feeling of healthy, naturally balanced skin, so that you can feel confident and comfortable in your everyday beauty and lifestyle choices.</p>",
-        "step_heading": "",
-        "steps_captions": "",
-        "btn_txt": "Learn More",
-        "btn_link": "#",
+        "enabled": true,
+        "block_bg_color": "#2b3033",
+        "block_text_color": "#ffffff",
+        "section_title": "Specializing in Drone<br> Technology for<br> Diverse Industries"
+      }
+    },
+    "d489225f-932d-4e14-9448-3ef9abc520bb": {
+      "type": "global-image-with-text",
+      "custom_css": [
+        "p {margin: 0;}"
+      ],
+      "settings": {
+        "step_heading": "insta360",
+        "heading_txt": "capture the world in all its vibrant glory",
+        "txt": "<p>We get it. Life's too short for complicated gadgets and confusing manuals. That's why Insta360 keeps things simple and fun, so you can spend less time tinkering and more time capturing memories that will last a lifetime.<\/p>",
+        "btn_txt": "shop insta360",
+        "btn_link": "shopify:\/\/collections\/all",
         "btn_type": "",
         "btn_variant": "primary",
         "btn_size": "",
-        "image": "shopify://shop_images/mlouye-new-small-naomi-mob.jpg",
-        "section_bg_color": "#fafaf7",
-        "section_text_color": "#000000",
-        "alignment": "text-left",
-        "image_alignment": "left"
+        "poster_type": "video",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/059425850e2e478c80bf6174faf427de.mp4",
+        "section_bg_color": "#f2f2f2",
+        "section_text_color": "#2b3033"
       }
     },
-    "1633694875e64c966c": {
-      "type": "global-testimonial",
+    "df72e106-092c-4ced-9f20-1ab81dc22940": {
+      "type": "global-featured-collection",
+      "settings": {
+        "collection_grid_type": "grid",
+        "heading_txt": "drone nerds recommends",
+        "btn_txt": "view all",
+        "btn_link": "shopify:\/\/collections\/trading-collections",
+        "home_featured_collection": "trading-collections",
+        "section_bg_color": "#ffffff",
+        "section_txt_color": "#2b3033"
+      }
+    },
+    "e86c4f41-fb3a-4a6a-bb5b-e20206dd1bc3": {
+      "type": "testimonial",
       "blocks": {
-        "bec19606-fd7b-4892-94c8-895d17e708a7": {
-          "type": "logowidthtext",
+        "c2e493fe-27e5-445b-8df8-9649083f4ba4": {
+          "type": "testimonial",
           "settings": {
-            "quote_logo": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Glamour_Logo.svg?v=1633088478",
-            "title": "<p>“People are raving about this botanical-infused concealer for calming their cystic acne.”</p>",
-            "author_name": "",
-            "alignment": "text-center"
+            "richtext": "“My repeat business with DroneNerds says it all. Bought a M2 Enterprise Dual two years ago and just bought a Mavic 3. Everyone was super helpful and I even got a call back at 8:30 PM when I asked for help activating my DJI Care package. Thanks everyone.”",
+            "title": "Thomas  l."
           }
         },
-        "ac18a9c2-3ee3-40a7-aa27-5a0b6ea0826a": {
-          "type": "logowidthtext",
+        "e3272718-961f-4480-b381-307021518078": {
+          "type": "testimonial",
           "settings": {
-            "quote_logo": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/Byrdie_Logo.svg?v=1633088478",
-            "title": "<p>“People are raving about this botanical-infused concealer for calming their cystic acne.”</p>",
-            "author_name": "",
-            "alignment": "text-center"
+            "richtext": "DroneNerds.com is the largest UAV dealer in the United States and we are DJI's largest and most experienced authorized service center in the United States.",
+            "title": "Alex G."
           }
         },
-        "3039a1d6-b656-43e3-b390-988ee1cedac5": {
-          "type": "logowidthtext",
+        "91d6f45c-bbeb-40a6-a137-573755aae257": {
+          "type": "testimonial",
           "settings": {
-            "quote_logo": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/New_Beauty_Logo.svg?v=1633088478",
-            "title": "<p>“People are raving about this botanical-infused concealer for calming their cystic acne.”</p>",
-            "author_name": "",
-            "alignment": "text-center"
+            "richtext": "We get it. Life's too short for complicated gadgets and confusing manuals. That's why Insta360 keeps things simple and fun, so you can spend less time tinkering and more time capturing memories that will last a lifetime.",
+            "title": "Jhon L."
           }
         },
-        "735daa80-06f6-48fb-97ef-0b3ca8569805": {
-          "type": "logowidthtext",
+        "728e58f0-8919-4149-8a24-16b731918163": {
+          "type": "testimonial",
           "settings": {
-            "quote_logo": "https://cdn.shopify.com/s/files/1/0581/7663/5061/files/YahooLifestyle_Logo.svg?v=1633088478",
-            "title": "<p>“People are raving about this botanical-infused concealer for calming their cystic acne.”</p>",
-            "author_name": "",
-            "alignment": "text-center"
+            "richtext": "We are  a team of drone experts dedicated to developing and supporting comprehensive UAV solutions and fleets for organizations across a multitude of industry verticals. Established in 2014.",
+            "title": "Sam x."
+          }
+        },
+        "8d3b4025-c369-4d94-9bfb-09b44640a960": {
+          "type": "testimonial",
+          "settings": {
+            "richtext": "Our experts are specifically trained on the latest drone technology to be able to assist you on the best solution for your needs.",
+            "title": "Tammy c."
+          }
+        },
+        "be3a96d3-9354-4248-815a-8aadca28655a": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_61.jpg",
+            "btn_txt_title": "shop dji mavic 3 series",
+            "btn_txt_link": "shopify:\/\/products\/the-collection-snowboard-liquid"
+          }
+        },
+        "c2d732a4-bdcf-485f-b02d-53b1a886b02e": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11.jpg",
+            "btn_txt_title": "Shop mavic 3 series 2",
+            "btn_txt_link": "shopify:\/\/products\/the-collection-snowboard-liquid"
+          }
+        },
+        "b8952d35-1974-420b-a1c7-9b2db133c405": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/43.jpg",
+            "btn_txt_title": "shop dji series 25",
+            "btn_txt_link": "shopify:\/\/products\/the-collection-snowboard-liquid"
+          }
+        },
+        "d9cb30cd-77ab-49fe-994b-f36111f91c57": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/31.jpg",
+            "btn_txt_title": "shop series 458",
+            "btn_txt_link": "shopify:\/\/products\/the-collection-snowboard-liquid"
+          }
+        },
+        "95cd0d56-c531-461b-a908-de8483f18903": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.jpg",
+            "btn_txt_title": "shop top fadway",
+            "btn_txt_link": "shopify:\/\/products\/the-collection-snowboard-liquid"
           }
         }
       },
       "block_order": [
-        "bec19606-fd7b-4892-94c8-895d17e708a7",
-        "ac18a9c2-3ee3-40a7-aa27-5a0b6ea0826a",
-        "3039a1d6-b656-43e3-b390-988ee1cedac5",
-        "735daa80-06f6-48fb-97ef-0b3ca8569805"
+        "c2e493fe-27e5-445b-8df8-9649083f4ba4",
+        "e3272718-961f-4480-b381-307021518078",
+        "91d6f45c-bbeb-40a6-a137-573755aae257",
+        "728e58f0-8919-4149-8a24-16b731918163",
+        "8d3b4025-c369-4d94-9bfb-09b44640a960",
+        "be3a96d3-9354-4248-815a-8aadca28655a",
+        "c2d732a4-bdcf-485f-b02d-53b1a886b02e",
+        "b8952d35-1974-420b-a1c7-9b2db133c405",
+        "d9cb30cd-77ab-49fe-994b-f36111f91c57",
+        "95cd0d56-c531-461b-a908-de8483f18903"
       ],
       "settings": {
-        "fluid_layout": false,
-        "heading_txt": "in the press",
-        "lead_txt": "",
-        "section_bg_color": "#ffffff",
-        "section_text_color": "#000000",
-        "enable": false,
-        "overlay_color": "#000000",
-        "opacity": 0.5,
-        "nav_arrows": false,
-        "nav_dots": true
-      }
-    },
-    "162943776301163939": {
-      "type": "global-video-with-text",
-      "settings": {
-        "fluid_layout": false,
-        "muted": true,
-        "controls": true,
-        "loop": true,
-        "title": "Awesome Heading",
-        "subtitle": "<p>Lipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.</p>",
-        "btn_txt": "",
-        "btn_link": "",
-        "btn_type": "",
-        "btn_variant": "white",
-        "btn_size": "",
-        "poster_type": "",
-        "bg_video": "",
-        "mobile_bg_video": "",
-        "poster_image": "shopify://shop_images/mlouye-thelma-louise-homepage-1.jpg",
-        "fluid_video_layout": true,
-        "video_type": "youtube",
-        "placement": "grid",
-        "video_id": "XqZsoesa55w",
-        "mobile_video_id": "",
-        "section_bg_color": "rgba(0,0,0,0)",
-        "section_text_color": "#ffffff",
-        "alignment": "text-left",
-        "video_alignment": "justify-content-center"
-      }
-    },
-    "1627036040e9086143": {
-      "type": "global-blog-posts",
-      "settings": {
-        "fluid_layout": false,
-        "blog_handles": "News",
-        "heading_txt": "News & Views",
-        "lead_txt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.",
-        "btn_txt": "",
-        "btn_url": "",
-        "section_bg_color": "#ffffff",
-        "section_txt_color": "#212529",
+        "enabled": true,
+        "title": "what people say",
+        "btn_txt": "READ ALL REVIEWS",
+        "btn_link": "shopify:\/\/pages\/about-us",
         "btn_type": "outline",
         "btn_variant": "primary",
-        "btn_size": ""
+        "btn_size": "",
+        "block_bg_color": "#f2f2f2",
+        "block_text_color": "#2b3033"
       }
     },
-    "163403325190e9c2fd": {
-      "type": "global-split-image-banner",
+    "1ec5afa7-b13d-49ee-87c7-9204c16fb4f5": {
+      "type": "global-features-grid",
       "blocks": {
-        "163403325190e9c2fd-0": {
-          "type": "heading",
+        "template--19740979757374__1ec5afa7-b13d-49ee-87c7-9204c16fb4f5-content-1": {
+          "type": "content",
           "settings": {
-            "heading": "Image banner"
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/path9756.svg?v=1690174143",
+            "title": "Free shipping over $599"
           }
         },
-        "163403325190e9c2fd-1": {
-          "type": "text",
+        "df9af3a0-d307-4539-bf0e-89508978ac06": {
+          "type": "content",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/rect9513.svg?v=1690174193",
+            "title": "Money back guarantee"
           }
         },
-        "163403325190e9c2fd-2": {
-          "type": "buttons",
+        "28645cd8-b19d-4415-b073-87f61fe45af2": {
+          "type": "content",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "btn_type_1": "",
-            "btn_variant_1": "primary",
-            "btn_size_1": "",
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "btn_type_2": "",
-            "btn_variant_2": "primary",
-            "btn_size_2": ""
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/path4814.svg?v=1690174261",
+            "title": "Dedicated service team"
+          }
+        },
+        "6d49733c-13b8-426a-9eb1-c2fcaeb80f9a": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0785\/6010\/0670\/files\/path5669.svg?v=1690174293",
+            "title": "Online support 24\/7"
           }
         }
       },
       "block_order": [
-        "163403325190e9c2fd-0",
-        "163403325190e9c2fd-1",
-        "163403325190e9c2fd-2"
+        "template--19740979757374__1ec5afa7-b13d-49ee-87c7-9204c16fb4f5-content-1",
+        "df9af3a0-d307-4539-bf0e-89508978ac06",
+        "28645cd8-b19d-4415-b073-87f61fe45af2",
+        "6d49733c-13b8-426a-9eb1-c2fcaeb80f9a"
       ],
       "settings": {
-        "image_small": "shopify://shop_images/mlouye-sera-tote-macaron-desk1.jpg",
-        "image_mobile": "shopify://shop_images/mlouye-sera-tote-macaron-mob2.jpg",
-        "image_small_2": "shopify://shop_images/mlouye-new-small-naomi-desktop.jpg",
-        "image_mobile_2": "shopify://shop_images/mlouye-new-small-naomi-mob.jpg",
-        "image_overlay_opacity": 0,
-        "height": "tallheight",
-        "show_text_box": true,
-        "text_caption_align": "justify-content-center",
-        "vertical_caption_align": "align-items-center",
-        "text_align": "text-center",
-        "color_scheme": "#ffffff",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
+        "section_bg_color": "#f2f2f2",
+        "section_txt_color": "#2b3033"
+      }
+    },
+    "ffaf0142-9182-44ee-bb2b-4604ecfcf2bd": {
+      "type": "instagram",
+      "blocks": {
+        "8763b741-be5d-4888-b90e-bd6aba632746": {
+          "type": "instaslider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_8768.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "8763b741-be5d-4888-b90e-bd6aba632746"
+      ],
+      "settings": {
+        "enabled": true,
+        "heading_txt": "the dronenerds community",
+        "btn_txt": "follow us on instagram",
+        "btn_link": "shopify:\/\/pages\/contact",
+        "section_bg_color": "#f2f2f2"
       }
     }
   },
   "order": [
     "16270344513581fee7",
-    "2b865f5c-7e70-4f62-8620-e3471df1555f",
-    "16270420142c0cafe8",
-    "162710985888a5f3c0",
-    "16273012625e8a6f4e",
+    "0712a294-dd56-4b3b-b5f6-5fb29250621c",
+    "92e201b1-013b-46d1-9e65-69c88cd9fe7e",
     "162703446299aaa8de",
-    "16271097114d5db4ef",
-    "16270454495feb2a63",
-    "1633694875e64c966c",
-    "162943776301163939",
-    "1627036040e9086143",
-    "163403325190e9c2fd"
+    "6c30b3cc-df0d-4463-ac8e-8fcf0c012f22",
+    "3e048a84-6696-4b7c-a06a-c2e2734a76fc",
+    "d489225f-932d-4e14-9448-3ef9abc520bb",
+    "df72e106-092c-4ced-9f20-1ab81dc22940",
+    "e86c4f41-fb3a-4a6a-bb5b-e20206dd1bc3",
+    "1ec5afa7-b13d-49ee-87c7-9204c16fb4f5",
+    "ffaf0142-9182-44ee-bb2b-4604ecfcf2bd"
   ]
 }

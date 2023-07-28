@@ -1,0 +1,174 @@
+{% if section.settings.enabled != blank %}
+  {{ 'instagram.css' | asset_url | stylesheet_tag }}
+  <section
+    class="section-content p-0"
+    data-section-id="{{ section.id }}"
+    style="background:{{ section.settings.section_bg_color }};"
+  >
+    {% if section.settings.heading_txt and section.settings.btn_txt != blank %}
+      <div class="container">
+        <div class="mb-2 mb-md-3 text-center text-lg-start pb-1 d-flex flex-wrap justify-content-center justify-content-md-between align-items-center">
+          {% if section.settings.heading_txt != blank %}
+            <div class="h3 mb-n1 mb-lg-0 pb-4 pb-lg-0">{{ section.settings.heading_txt }}</div>
+          {% endif %}
+          {% if section.settings.btn_txt != blank %}
+            <a
+              {% if section.settings.btn_link %}
+                href="{{ section.settings.btn_link }}"
+              {% endif -%}
+              class="fw-semibold btn-link btn"
+            >
+              <span class="add-text">{{- section.settings.btn_txt -}}</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="insta-img">
+        {% for block in section.blocks %}
+        {%- if block.settings.image != blank -%}
+          <img
+            srcset="
+              {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if block.settings.image.width >= 450 -%}{{ block.settings.image | image_url: width: 450 }} 450w,{%- endif -%}
+              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if block.settings.image.width >= 650 -%}{{ block.settings.image | image_url: width: 650 }} 650w{%- endif -%}
+            "
+            src="{{ block.settings.image | image_url: width: 50 }}"
+            sizes="100vw"
+            alt="{{ block.settings.title | escape }}"
+            class="w-100"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+        {% endfor %}
+      </div>
+
+    {% comment %} {% if section.blocks.size > 1 %}
+      <slider-element class="swiper-container carousel">
+        <div
+          class="swiper swiper-slider spot-slider-list pb-8 pb-lg-0"
+          data-slider='
+            {
+                "loop": true,
+                "slidesPerView": "auto",
+                "centeredSlides": true,
+                "grabCursor": true,
+                "speed": 500
+            }
+          '
+        >
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide  d-flex flex-column">
+                <div class="insta-img">
+                  {%- if block.settings.image != blank -%}
+                    <img
+                      srcset="
+                        {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if block.settings.image.width >= 450 -%}{{ block.settings.image | image_url: width: 450 }} 450w,{%- endif -%}
+                        {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                        {%- if block.settings.image.width >= 650 -%}{{ block.settings.image | image_url: width: 650 }} 650w,{%- endif -%}
+                        {%- if block.settings.image.width >= 780 -%}{{ block.settings.image | image_url: width: 780 }} 780w,{%- endif -%}
+                        {%- if block.settings.image.width >= 900 -%}{{ block.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1200 -%}{{ block.settings.image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1400 -%}{{ block.settings.image | image_url: width: 1400 }} 1400w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1600 -%}{{ block.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1800 -%}{{ block.settings.image | image_url: width: 1800 }} 1800w{%- endif -%}
+                      "
+                      src="{{ block.settings.image | image_url: width: 50 }}"
+                      sizes="(min-width: 992px) 57.64vw, calc(100vw - 40px)"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      class="w-100"
+                      loading="lazy"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
+                    >
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </slider-element>
+    {% endif %} {% endcomment %}
+  </section>
+{% endif %}
+{% schema %}
+{
+  "name": "Instagram",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading_txt",
+      "label": "Section Title",
+      "default": "the dronenerds community"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "instaslider",
+      "name": "Instagram Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

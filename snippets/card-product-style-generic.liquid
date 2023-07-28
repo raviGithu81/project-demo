@@ -1,6 +1,6 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 
-<div class="card card-product card-product-style-1 text-start rounded-0 border-0" data-product-grid>
+<div class="card card-product card-product-style-1 text-start rounded-0" data-product-grid>
   <span class="badges">
     {%- liquid
       assign onSale = false
@@ -20,20 +20,19 @@
       {%- assign badgeData = badge | strip | split: ':' -%}
       {%- assign badgeLabel = badgeData[1] | strip -%}
       {%- if product.tags contains badgeData[0] -%}
-        <span class="badge badge-right badge-warning" >
+        <span class="badge badge-right badge-primary-300" >
           {{ badgeLabel }}
         </span>
       {%- endif -%}
     {%- endfor -%}
 
     {% if onSale %}
-      <span class="badge badge-right badge-danger" >
+      <span class="badge badge-right badge-green" >
         {{ 'products.product.on_sale' | t | escape }}
       </span>
     {% endif %}
-
     {% if soldOut %}
-      <span class="badge badge-right badge-warning">
+      <span class="badge badge-right badge-primary-300">
         {{ 'products.product.sold_out' | t | escape }}
       </span>
     {% endif %}
@@ -47,11 +46,13 @@
       <a href="{{ product.url | within: collection }}" class="d-block product-link" >
             <img
             srcset="
-              {%- if current_variant.image.width >= 360 -%}{{ current_variant.image | image_url: width: 360 }} 360w,{%- endif -%}
-              {%- if current_variant.image.width >= 533 -%}{{ current_variant.image | image_url: width: 533 }} 533w,{%- endif -%}"
+              {%- if current_variant.image.width >= 200 -%}{{ current_variant.image | image_url: width: 200 }} 200w,{%- endif -%}
+              {%- if current_variant.image.width >= 250 -%}{{ current_variant.image | image_url: width: 250 }} 250w,{%- endif -%}
+              {%- if current_variant.image.width >= 300 -%}{{ current_variant.image | image_url: width: 300 }} 300w,{%- endif -%}
+              {%- if current_variant.image.width >= 400 -%}{{ current_variant.image | image_url: width: 400 }} 400w,{%- endif -%}
+              {%- if current_variant.image.width >= 500 -%}{{ current_variant.image | image_url: width: 500 }} 500w{%- endif -%}"
             src="{{ current_variant.image | image_url: width: 50 }}"
-
-            sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"                
+            sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | divided_by: 4 | minus: 61 }}px, (min-width: 992px) calc((100vw / 4) - 60px), (min-width: 768px) calc((100vw / 3) - 60px), calc((100vw / 2) - 25px)"                
             loading="lazy"
             data-feauredImage
             alt="{{ current_variant.image.alt | default: current_variant.title | escape }}"
@@ -61,12 +62,13 @@
         {%- if settings.show_secondary_image and secondaryImage -%}
         <img 
             srcset="
-              {%- if secondaryImage.width >= 360 -%}{{ secondaryImage | image_url: width: 360 }} 360w,{%- endif -%}
-              {%- if secondaryImage.width >= 533 -%}{{ secondaryImage | image_url: width: 533 }} 533w,{%- endif -%}"
+              {%- if secondaryImage.width >= 200 -%}{{ secondaryImage | image_url: width: 200 }} 200w,{%- endif -%}
+              {%- if secondaryImage.width >= 250 -%}{{ secondaryImage | image_url: width: 250 }} 250w,{%- endif -%}
+              {%- if secondaryImage.width >= 300 -%}{{ secondaryImage | image_url: width: 300 }} 300w,{%- endif -%}
+              {%- if secondaryImage.width >= 400 -%}{{ secondaryImage | image_url: width: 400 }} 400w,{%- endif -%}
+              {%- if secondaryImage.width >= 500 -%}{{ secondaryImage | image_url: width: 500 }} 500w{%- endif -%}"
             src="{{ secondaryImage | image_url: width: 50 }}"
-
-            sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"                
-
+            sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | divided_by: 4 | minus: 61 }}px, (min-width: 992px) calc((100vw / 4) - 60px), (min-width: 768px) calc((100vw / 3) - 60px), calc((100vw / 2) - 25px)"                
             loading="lazy"
             class="w-100"
             data-hoverImage
@@ -79,11 +81,14 @@
         <a href="{{ product.url | within: collection }}" class="d-block product-link" >
                 <img
                 srcset="
-                  {%- if product.featured_image.width >= 360 -%}{{ product.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if product.featured_image.width >= 533 -%}{{ product.featured_image | image_url: width: 533 }} 533w,{%- endif -%}"
+                  {%- if product.featured_image.width >= 200 -%}{{ product.featured_image | image_url: width: 200 }} 200w,{%- endif -%}
+                  {%- if product.featured_image.width >= 250 -%}{{ product.featured_image | image_url: width: 250 }} 250w,{%- endif -%}
+                  {%- if product.featured_image.width >= 300 -%}{{ product.featured_image | image_url: width: 300 }} 300w,{%- endif -%}
+                  {%- if product.featured_image.width >= 400 -%}{{ product.featured_image | image_url: width: 400 }} 400w,{%- endif -%}
+                  {%- if product.featured_image.width >= 500 -%}{{ product.featured_image | image_url: width: 500 }} 500w{%- endif -%}"
                 src="{{ product.featured_image | image_url: width: 50 }}"
 
-                sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"                
+                sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | divided_by: 4 | minus: 61 }}px, (min-width: 992px) calc((100vw / 4) - 60px), (min-width: 768px) calc((100vw / 3) - 60px), calc((100vw / 2) - 25px)"                
                 loading="lazy"
                 data-feauredImage
                 alt="{{ product.featured_image.alt | default: current_variant.title | escape }}"
@@ -94,10 +99,13 @@
 
             {%- if settings.show_secondary_image and product.images[1] -%}
             <img srcset="
-                  {%- if product.images[1].width >= 360 -%}{{ product.images[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if product.images[1].width >= 533 -%}{{ product.images[1] | image_url: width: 533 }} 533w,{%- endif -%}"
+                  {%- if product.images[1].width >= 200 -%}{{ product.images[1] | image_url: width: 200 }} 200w,{%- endif -%}
+                  {%- if product.images[1].width >= 250 -%}{{ product.images[1] | image_url: width: 250 }} 250w,{%- endif -%}
+                  {%- if product.images[1].width >= 300 -%}{{ product.images[1] | image_url: width: 300 }} 300w,{%- endif -%}
+                  {%- if product.images[1].width >= 400 -%}{{ product.images[1] | image_url: width: 400 }} 400w,{%- endif -%}
+                  {%- if product.images[1].width >= 500 -%}{{ product.images[1] | image_url: width: 500 }} 500w{%- endif -%}"
                 src="{{ product.images[1] | image_url: width: 50 }}"
-                sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"
+                sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | divided_by: 4 | minus: 61 }}px, (min-width: 992px) calc((100vw / 4) - 60px), (min-width: 768px) calc((100vw / 3) - 60px), calc((100vw / 2) - 25px)"
                 loading="lazy"
                 class="w-100"
                 data-hoverImage
@@ -110,9 +118,12 @@
       <a href="{{ product.url | within: collection }}" class="d-block product-link" >
         <img src="{{ settings.no_image_replacement | image_url }}"
             srcset="
-                  {%- if settings.no_image_replacement.width >= 360 -%}{{ settings.no_image_replacement | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if settings.no_image_replacement.width >= 533 -%}{{ settings.no_image_replacement | image_url: width: 533 }} 533w,{%- endif -%}"
-            sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"
+                  {%- if settings.no_image_replacement.width >= 200 -%}{{ settings.no_image_replacement | image_url: width: 200 }} 200w,{%- endif -%}
+                  {%- if settings.no_image_replacement.width >= 250 -%}{{ settings.no_image_replacement | image_url: width: 250 }} 250w,{%- endif -%}
+                  {%- if settings.no_image_replacement.width >= 300 -%}{{ settings.no_image_replacement | image_url: width: 300 }} 300w,{%- endif -%}
+                  {%- if settings.no_image_replacement.width >= 400 -%}{{ settings.no_image_replacement | image_url: width: 400 }} 400w,{%- endif -%}
+                  {%- if settings.no_image_replacement.width >= 500 -%}{{ settings.no_image_replacement | image_url: width: 500 }} 500w{%- endif -%}"
+            sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | divided_by: 4 | minus: 61 }}px, (min-width: 992px) calc((100vw / 4) - 60px), (min-width: 768px) calc((100vw / 3) - 60px), calc((100vw / 2) - 25px)"                
             loading="lazy"
             class="w-100"
             data-feauredImage
@@ -124,30 +135,9 @@
         {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }}
     {% endif %}
   </div>
-  <div class="card-body px-0">
-    <div class="row no-gutter">
-        <div class="col-8">
-            <h6 class="card-title m-0 font-family-base">
-                <a class="product-link lh-base" role="button" href="{{ product.url | within: collection }}">{{ product.title }}</a>
-            </h6>
-        </div>
-        <div class="col-4 text-end">
-          {% if current_variant and current_variant.compare_at_price > current_variant.price %}
-            <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
-          {% elsif product.compare_at_price > product.price %}
-            <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
-          {% endif %}
-          <span class="price m-0 p-0 money" data-currentPrice>
-            {% if current_variant %}
-              {{ current_variant.price | money }}
-            {% elsif product.price_varies %}
-              {% assign minPrice = product.price_min | money %}
-              {% assign maxPrice = product.price_max | money %}
-              {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
-            {% else %}
-              {{ product.price | money }}
-            {% endif %}
-          </span>
+  <div class="card-body px-0 pt-2 pt-lg-3 pb-0">
+        <div class="h6 card-title fw-medium text-capitalize ls-0">
+            <a class="product-link lh-base" role="button" href="{{ product.url | within: collection }}">{{ product.title }}</a>
         </div>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -155,7 +145,6 @@
               {% render block %}
           {%- endcase -%}
         {%- endfor -%}
-    </div>
     
     {%- if settings.show_vendor -%}
         <p>{{ product.vendor }}</p>
@@ -166,4 +155,32 @@
       {%- render 'form-product-grid', product: product, current_variant: current_variant -%}
     </div>
   {%- endif -%}
+  <div class="card-footer bg-transparent border-0 p-0">
+    <div class="card-pr-price pb-4 mb-n1 mb-lg-0">
+      <span class="price m-0 p-0 money {% if current_variant and current_variant.compare_at_price > current_variant.price and product.compare_at_price > product.price %}text-red{% endif %} me-1 font-size-md" data-currentPrice>
+        {% if current_variant %}
+          {{ current_variant.price | money }}
+        {% elsif product.price_varies %}
+          {% assign minPrice = product.price_min | money %}
+          {% assign maxPrice = product.price_max | money %}
+          {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      </span>
+      {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+        <s class="price 2 font-size-xs m-0 p-0 text-primary-300 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+      {% elsif product.compare_at_price > product.price %}
+        <s class="price 1 font-size-xs m-0 p-0 text-primary-300 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+      {% endif %}
+    </div>
+  <button class="btn btn-full w-100 btn-primary {% unless current_variant.available %}border-primary-300 btn-secondary disabled {% endunless %}"
+    type="submit"
+    name="add"
+    aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+    {% unless current_variant.available %}disabled{% endunless %}>
+    <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.back_order' | t }}{%- endif -%}</span>
+    <span class="spinner"></span>
+</button>
+</div>
 </div>

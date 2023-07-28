@@ -1,4 +1,4 @@
-<ul class="social-links list-unstyled list-inline mt-3 mb-0">
+<ul class="social-links list-unstyled list-inline mt-3 mb-0 d-flex flex-grow-1 justify-content-between justify-content-lg-start">
     {% if section.settings.social_icon_facebook %}
     <li class="list-inline-item">
         <a href="{{ settings.social_facebook_link }}" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="Facebook" rel="nofollow" aria-label="Facebook">
@@ -7,27 +7,41 @@
     </li>
     {% endif %}
 
-    {% if section.settings.social_icon_twitter %}
-    <li class="list-inline-item">
-        <a href="{{ settings.social_twitter_link }}" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="Twitter" rel="nofollow" aria-label="Twitter">
-            <span class="icon-twitter"></span>
-        </a>
-    </li>
-    {% endif %}
-
     {% if section.settings.social_icon_instagram %}
-    <li class="list-inline-item">
-        <a href="{{ settings.social_instagram_link }}" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="Instagram" rel="nofollow" aria-label="Instagram">
-            <span class="icon-instagram"></span>
-        </a>
-    </li>
+        <li class="list-inline-item">
+            <a href="{{ settings.social_instagram_link }}" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="Instagram" rel="nofollow" aria-label="Instagram">
+                <span class="icon-Instagram"></span>
+            </a>
+        </li>
     {% endif %}
-
+    
     {% if section.settings.social_icon_youtube %}
     <li class="list-inline-item">
         <a href="{{ settings.social_youtube_link }}" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="YouTube" rel="nofollow" aria-label="YouTube">
-            <span class="icon-youtube-new"></span>
+            <span class="icon-Youtube"></span>
         </a>
     </li>
+    {% endif %}
+    
+    {% if section.settings.social_icon_twitter %}
+    <li class="list-inline-item">
+        <a href="{{ settings.social_twitter_link }}" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="Twitter" rel="nofollow" aria-label="Twitter">
+            <span class="icon-Twitter"></span>
+        </a>
+    </li>
+    {% endif %}
+    {% if section.settings.social_icon_tiktok %}
+        <li class="list-inline-item">
+            <a href="/" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="TikTok" rel="nofollow" aria-label="TikTok">
+                <span class="icon-tick-tok"></span>
+            </a>
+        </li>
+    {% endif %}
+    {% if section.settings.social_icon_linkedin %}
+        <li class="list-inline-item">
+            <a href="/" target="_blank" style="color: {{ section.settings.footer_top_link_color }};" title="Linkedin" rel="nofollow" aria-label="Linkedin">
+                <span class="icon-linkedin"></span>
+            </a>
+        </li>
     {% endif %}
 </ul>
